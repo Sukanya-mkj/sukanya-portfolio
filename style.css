@@ -109,6 +109,26 @@ h1.name{
 .meta-row span:last-child{border-right:none;}
 .meta-row a{color:var(--ink); text-decoration-color:var(--amber);}
 
+.cv-button{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:var(--mono);
+  font-size:13.5px;
+  color:var(--ink);
+  text-decoration:none;
+  background:var(--paper-raised);
+  border:1px solid var(--ink);
+  border-radius:3px;
+  padding:11px 18px;
+  margin-top:26px;
+  transition:background 0.15s ease, color 0.15s ease;
+}
+.cv-button:hover{
+  background:var(--ink);
+  color:var(--paper);
+}
+
 /* ---------- Section shell ---------- */
 section{padding:64px 0;}
 section + section{border-top:1px solid var(--line);}

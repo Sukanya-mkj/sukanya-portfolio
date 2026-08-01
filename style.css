@@ -92,6 +92,10 @@ header.hero{
   background:linear-gradient(135deg,#1C3548 0%,#284B63 60%,#1C3548 100%);
 }
 header.hero .wrap{
+  padding-top:0;
+  padding-bottom:0;
+}
+header.hero .hero-left{
   padding-top:52px;
   padding-bottom:52px;
 }
@@ -99,17 +103,37 @@ header.hero .wrap{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:0;
-  align-items:center;
+  align-items:stretch;
 }
 .hero-left{
   padding-right:80px;
   border-right:1px solid rgba(60,110,113,0.25);
-}
-.hero-right{
-  padding-left:80px;
   display:flex;
   flex-direction:column;
   justify-content:center;
+}
+.hero-right{
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+}
+.hero-photo{
+  flex:1;
+  overflow:hidden;
+  min-height:180px;
+}
+.hero-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:top center;
+  display:block;
+}
+.hero-statement-bar{
+  flex-shrink:0;
+  padding:20px 32px;
+  background:rgba(0,0,0,0.22);
+  border-top:1px solid rgba(60,110,113,0.25);
 }
 /* White overrides for dark hero bg */
 header.hero .doc-tag{ color:#3C6E71; }
@@ -135,7 +159,7 @@ header.hero .meta-row span{ border-right-color:rgba(255,255,255,0.12); }
 .hero-statement{
   font-family:var(--sans);
   font-weight:700;
-  font-size:clamp(18px,2.6vw,30px);
+  font-size:clamp(14px,1.8vw,22px);
   letter-spacing:0.07em;
   text-transform:uppercase;
   color:#FFFFFF;
@@ -163,7 +187,8 @@ header.hero .meta-row span{ border-right-color:rgba(255,255,255,0.12); }
 @media(max-width:760px){
   .hero-inner{grid-template-columns:1fr;}
   .hero-left{padding-right:0;border-right:none;border-bottom:1px solid rgba(60,110,113,0.25);padding-bottom:40px;margin-bottom:40px;}
-  .hero-right{padding-left:0;}
+  .hero-photo{min-height:260px;max-height:300px;}
+  .hero-statement-bar{padding:16px 20px;}
 }
 .doc-tag{
   font-family:var(--sans);
@@ -613,6 +638,123 @@ h2{
   background:var(--lilac-pale);
   border-radius:20px;
   padding:3px 10px;
+}
+
+/* ---------- Photo cards ---------- */
+.photo-card{
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  background:var(--paper);
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
+a.photo-card{
+  transition:box-shadow 0.18s ease, transform 0.18s ease;
+}
+a.photo-card:hover{
+  box-shadow:0 8px 28px rgba(40,75,99,0.13);
+  transform:translateY(-3px);
+}
+.photo-card-img{
+  width:100%;
+  aspect-ratio:3/2;
+  object-fit:cover;
+  object-position:top center;
+  display:block;
+}
+.edu-photo-card{
+  display:flex;
+  flex-direction:column;
+}
+.edu-photo-card .photo-card-img{
+  flex:1;
+  width:100%;
+  height:100%;
+  aspect-ratio:unset;
+  max-height:none;
+  object-fit:cover;
+  object-position:center 30%;
+}
+.photo-card-placeholder-img{
+  width:100%;
+  aspect-ratio:4/3;
+  background:linear-gradient(135deg,#E8F1F7 0%,#DFF0EF 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.photo-card-placeholder-img svg{
+  width:36px;height:36px;
+  stroke:rgba(60,110,113,0.3);
+  fill:none;
+  stroke-width:1.5;
+}
+.photo-card-body{
+  padding:16px 20px 20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+.photo-card-body-top{
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+}
+.photo-card-cta{
+  font-family:var(--sans);
+  font-size:13px;
+  font-weight:600;
+  color:#3C6E71;
+  margin-left:46px;
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  letter-spacing:0.01em;
+}
+.photo-card-icon{
+  flex-shrink:0;
+  width:34px;height:34px;
+  border-radius:9px;
+  background:var(--lilac-pale);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.photo-card-icon .icon{
+  width:16px;height:16px;
+  stroke:var(--lilac-deep);
+  fill:none;
+}
+.photo-card-title{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:1rem;
+  color:var(--ink);
+  margin:0 0 3px;
+}
+.photo-card-sub{
+  font-size:0.84rem;
+  color:var(--ink-soft);
+  margin:0;
+  line-height:1.4;
+}
+
+/* Education layout: photo card left, edu-cards stacked right */
+.edu-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+  align-items:stretch;
+}
+.edu-cards-stack{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+@media(max-width:700px){
+  .edu-layout{grid-template-columns:1fr;}
 }
 
 /* ---------- Contact / footer ---------- */

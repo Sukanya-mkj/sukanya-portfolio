@@ -3,13 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sukanya Mukherjee | Marketing Strategy and Operations PMO</title>
+<title>Sukanya Mukherjee | PMO &amp; Marketing Operations</title>
 <meta name="description" content="Marketing Operations Project Manager with 6+ years leading cross-functional programs for Fortune 500 and global enterprises, integrating Agentic AI to accelerate delivery.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
+  .about-layout {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 64px;
+    align-items: center;
+  }
+  .about-layout .about-text p {
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+    font-size: 1.02rem;
+  }
+  .about-layout .about-text p:last-child { margin-bottom: 0; }
+  .about-card {
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    box-shadow: 0 8px 32px rgba(110,79,196,0.08);
+    overflow: hidden;
+  }
+  @media (max-width: 860px) {
+    .about-layout { grid-template-columns: 1fr; gap: 40px; }
+  }
   .site-topnav {
     position: sticky;
     top: 0;
@@ -151,9 +173,126 @@
         <span class="section-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span>
         <h2>About</h2>
       </div>
-      <p>I have never had a perfectly linear career path, and that is exactly what I love about it. I started in content and storytelling before finding myself drawn to the systems, processes, and collaboration that turn ideas into outcomes. That curiosity led me into project management, operations, and business transformation.</p>
-      <p>Today, I work at the intersection of people, process, and execution. Over the last six years, I have stepped into programs that were genuinely chaotic, ambiguous mandates, teams unsure of what leadership actually wanted, deadlines that assumed clarity nobody had yet. My role has consistently been the same one: find the midpoint between what is being asked for and what is actually possible, and lead the team there with empathy rather than pressure.</p>
-      <p>I am passionate about continuous improvement, operational excellence, and exploring how AI can help teams work smarter and focus on higher value work. The projects below are less about the tools I used and more about the moments where structure had to be built from scratch, often under pressure, and always with people on the other end of the outcome.</p>
+      <div class="about-layout">
+        <div class="about-text">
+          <p>I have never had a perfectly linear career path, and that is exactly what I love about it. I started in content and storytelling before finding myself drawn to the systems, processes, and collaboration that turn ideas into outcomes. That curiosity led me into project management, operations, and business transformation.</p>
+          <p>Today, I work at the intersection of people, process, and execution. Over the last six years, I have stepped into programs that were genuinely chaotic, ambiguous mandates, teams unsure of what leadership actually wanted, deadlines that assumed clarity nobody had yet. My role has consistently been the same one: find the midpoint between what is being asked for and what is actually possible, and lead the team there with empathy rather than pressure.</p>
+          <p>I am passionate about continuous improvement, operational excellence, and exploring how AI can help teams work smarter and focus on higher value work. The projects below are less about the tools I used and more about the moments where structure had to be built from scratch, often under pressure, and always with people on the other end of the outcome.</p>
+        </div>
+        <div class="about-card">
+          <svg viewBox="0 0 320 480" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="320" height="480">
+            <defs>
+              <linearGradient id="illustBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#EDE3FA"/>
+                <stop offset="100%" stop-color="#F4EEFC"/>
+              </linearGradient>
+              <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6E4FC4"/>
+                <stop offset="100%" stop-color="#C98BC9"/>
+              </linearGradient>
+              <filter id="softglow"><feGaussianBlur stdDeviation="8"/></filter>
+            </defs>
+
+            <!-- Illustration background -->
+            <rect width="320" height="200" fill="url(#illustBg)"/>
+
+            <!-- Glow behind centre circle -->
+            <circle cx="160" cy="96" r="55" fill="#8E6FDB" opacity="0.12" filter="url(#softglow)"/>
+
+            <!-- Orbit ring -->
+            <circle cx="160" cy="96" r="66" fill="none" stroke="#8E6FDB" stroke-width="1" stroke-dasharray="5,4" opacity="0.35"/>
+
+            <!-- Centre circle -->
+            <circle cx="160" cy="96" r="40" fill="url(#centerGrad)"/>
+            <!-- Abstract person in centre -->
+            <circle cx="160" cy="86" r="11" fill="white" opacity="0.9"/>
+            <path d="M138 118 Q160 106 182 118" fill="white" opacity="0.75"/>
+
+            <!-- Orbiting nodes -->
+            <!-- PMO - top left -->
+            <circle cx="102" cy="46" r="18" fill="white" stroke="#E4D9F5" stroke-width="1.5"/>
+            <text x="102" y="50" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#6E4FC4" font-weight="500">PMO</text>
+            <line x1="117" y1="60" x2="126" y2="70" stroke="#8E6FDB" stroke-width="1" opacity="0.4"/>
+
+            <!-- GTM - top right -->
+            <circle cx="218" cy="46" r="18" fill="white" stroke="#E4D9F5" stroke-width="1.5"/>
+            <text x="218" y="50" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#6E4FC4" font-weight="500">GTM</text>
+            <line x1="203" y1="60" x2="194" y2="70" stroke="#8E6FDB" stroke-width="1" opacity="0.4"/>
+
+            <!-- AI - right -->
+            <circle cx="240" cy="110" r="18" fill="white" stroke="#F0D9F5" stroke-width="1.5"/>
+            <text x="240" y="114" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#C98BC9" font-weight="500">AI</text>
+            <line x1="222" y1="106" x2="200" y2="102" stroke="#C98BC9" stroke-width="1" opacity="0.4"/>
+
+            <!-- Ops - left -->
+            <circle cx="80" cy="110" r="18" fill="white" stroke="#F0D9F5" stroke-width="1.5"/>
+            <text x="80" y="114" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="#C98BC9" font-weight="500">Ops</text>
+            <line x1="98" y1="106" x2="120" y2="102" stroke="#C98BC9" stroke-width="1" opacity="0.4"/>
+
+            <!-- Sparkles -->
+            <text x="268" y="40" font-size="14" fill="#C98BC9" opacity="0.55">✦</text>
+            <text x="44" y="38" font-size="10" fill="#8E6FDB" opacity="0.5">✦</text>
+            <text x="280" y="160" font-size="8" fill="#C98BC9" opacity="0.4">✦</text>
+            <text x="30" y="168" font-size="9" fill="#8E6FDB" opacity="0.35">✦</text>
+
+            <!-- Divider -->
+            <rect x="0" y="200" width="320" height="1" fill="#E4D9F5"/>
+
+            <!-- Stats area background -->
+            <rect x="0" y="201" width="320" height="279" fill="white"/>
+
+            <!-- Stat 1: Years -->
+            <text x="36" y="256" font-family="Fraunces,Georgia,serif" font-size="48" font-weight="700" fill="#2B2140">6+</text>
+            <text x="36" y="276" font-family="Inter,sans-serif" font-size="12" fill="#6B5D89">Years of experience</text>
+
+            <!-- Stat 2: Industries -->
+            <text x="178" y="256" font-family="Fraunces,Georgia,serif" font-size="48" font-weight="700" fill="#2B2140">7+</text>
+            <text x="178" y="276" font-family="Inter,sans-serif" font-size="12" fill="#6B5D89">Industries served</text>
+
+            <!-- Mid divider -->
+            <rect x="24" y="292" width="272" height="1" fill="#F0E9FC"/>
+
+            <!-- Stat 3: Programs -->
+            <text x="36" y="346" font-family="Fraunces,Georgia,serif" font-size="48" font-weight="700" fill="#6E4FC4">10+</text>
+            <text x="36" y="366" font-family="Inter,sans-serif" font-size="12" fill="#6B5D89">Programs managed</text>
+
+            <!-- Stat 4: Awards -->
+            <text x="210" y="346" font-family="Fraunces,Georgia,serif" font-size="48" font-weight="700" fill="#C98BC9">3</text>
+            <text x="196" y="366" font-family="Inter,sans-serif" font-size="12" fill="#6B5D89">Awards won</text>
+
+            <!-- Bottom divider -->
+            <rect x="24" y="382" width="272" height="1" fill="#F0E9FC"/>
+
+            <!-- Skill tags row 1 -->
+            <rect x="24" y="396" width="48" height="22" rx="11" fill="#F0E9FC"/>
+            <text x="48" y="411" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9.5" fill="#6E4FC4">PMO</text>
+
+            <rect x="78" y="396" width="48" height="22" rx="11" fill="#F0E9FC"/>
+            <text x="102" y="411" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9.5" fill="#6E4FC4">GTM</text>
+
+            <rect x="132" y="396" width="58" height="22" rx="11" fill="#F0E9FC"/>
+            <text x="161" y="411" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9.5" fill="#6E4FC4">AI Ops</text>
+
+            <rect x="196" y="396" width="46" height="22" rx="11" fill="#FDF0FC"/>
+            <text x="219" y="411" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9.5" fill="#C98BC9">BRD</text>
+
+            <rect x="248" y="396" width="48" height="22" rx="11" fill="#FDF0FC"/>
+            <text x="272" y="411" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9.5" fill="#C98BC9">F500</text>
+
+            <!-- Skill tags row 2 -->
+            <rect x="24" y="424" width="118" height="22" rx="11" fill="#F0E9FC"/>
+            <text x="83" y="439" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9.5" fill="#6E4FC4">Marketing Strategy</text>
+
+            <rect x="148" y="424" width="148" height="22" rx="11" fill="#FDF0FC"/>
+            <text x="222" y="439" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9.5" fill="#C98BC9">Stakeholder Management</text>
+
+            <!-- Open to work badge -->
+            <rect x="24" y="456" width="272" height="20" rx="10" fill="rgba(110,79,196,0.07)" stroke="rgba(110,79,196,0.18)" stroke-width="1"/>
+            <circle cx="40" cy="466" r="3.5" fill="#6E4FC4" opacity="0.75"/>
+            <text x="52" y="470" font-family="IBM Plex Mono,monospace" font-size="9" fill="#6E4FC4">Open to opportunities · Bengaluru &amp; Remote</text>
+          </svg>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -282,7 +421,7 @@
             <span class="featured-tag">GTM &amp; Operations</span>
             <h3>Enterprise Product Launch and AI-Augmented GTM Workflow</h3>
             <p>A product ready to ship with no go-to-market behind it. Four teams, one GTM brief, and an AI-augmented workflow that cut documentation time by 40% and became the team's new standard.</p>
-            <span class="featured-cta">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <span class="featured-cta">Read case study <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
           <div class="featured-card-visual" style="background:#1A1035;">
             <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
@@ -367,7 +506,7 @@
             <span class="featured-tag" style="color:var(--rose);background:rgba(201,139,201,0.12);border-color:rgba(201,139,201,0.28);">Travel &amp; Hospitality</span>
             <h3>Global Campaign and Loyalty Programme Across Three Markets</h3>
             <p>Three regions, one campaign framework, a loyalty programme layered in mid-campaign, and a final result of 117% of target across EMEA, Europe, and South America.</p>
-            <span class="featured-cta" style="color:var(--rose);">Read More <svg viewBox="0 0 24 24" style="stroke:var(--rose)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <span class="featured-cta" style="color:var(--rose);">Read case study <svg viewBox="0 0 24 24" style="stroke:var(--rose)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
           <div class="featured-card-visual" style="background:#3D2070;">
             <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
@@ -504,7 +643,7 @@
       </div>
       <div class="timeline">
         <div class="role">
-          <p class="role-title">Operations Lead Associate, Deloitte Digital</p>
+          <p class="role-title">Operations Lead Associate, Deloitte Business Operations Services LLP</p>
           <p class="role-meta">Bengaluru, India &middot; July 2023 to Present</p>
           <ul>
             <li>Led end-to-end program delivery for 10+ Fortune 500 and global enterprise clients across healthcare, retail, chemicals, education, and public sector, lifting client satisfaction scores from 73 percent to 88 percent and improving delivery predictability by 15 points.</li>

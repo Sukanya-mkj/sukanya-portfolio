@@ -1,6 +1,6 @@
 # sukanya.site
 
-Personal portfolio and case study site for Sukanya Mukherjee — Marketing Strategy and Operations PMO.
+Personal portfolio and case study site for Sukanya Mukherjee | Marketing Strategy and Operations PMO
 
 Live at [sukanya.site](https://sukanya.site)
 

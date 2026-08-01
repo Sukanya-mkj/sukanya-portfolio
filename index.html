@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sukanya Mukherjee | Marketing Strategy and Operations PMO</title>
+<title>Sukanya Mukherjee | PMO and Marketing Operations</title>
 <meta name="description" content="Marketing Operations Project Manager with 6+ years leading cross-functional programs for Fortune 500 and global enterprises, integrating Agentic AI to accelerate delivery.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="shortcut icon" href="favicon.svg">
@@ -104,8 +104,18 @@
   }
   @media (max-width: 640px) {
     .site-topnav-brand { display: none; }
-    .site-topnav-links { gap: 4px; }
-    .site-topnav-links a { padding: 6px 11px; font-size: 13px; }
+    .site-topnav { padding: 0; }
+    .site-topnav-inner {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      justify-content: flex-start;
+      padding: 0 12px;
+      gap: 0;
+    }
+    .site-topnav-inner::-webkit-scrollbar { display: none; }
+    .site-topnav-links { gap: 3px; flex-shrink: 0; }
+    .site-topnav-links a { padding: 6px 10px; font-size: 12px; }
   }
 
   /* ── Liberal palette use ── */
@@ -499,7 +509,6 @@
       flex: 0 0 42%;
       overflow: hidden;
       aspect-ratio: 1 / 1;
-      align-self: flex-start;
     }
     .featured-card-visual svg { width: 100%; height: 100%; display: block; }
     @media (max-width: 860px) {

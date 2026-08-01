@@ -124,6 +124,83 @@
     border-color: #1C3548;
     box-shadow: 0 0 0 1.5px #3C6E71;
   }
+
+  /* --- Experience: Deloitte grouping --- */
+  #experience .company-group-header { margin-bottom: 20px; }
+  #experience .company-group-name {
+    font-size: 17px; font-weight: 700; color: #FFFFFF;
+    letter-spacing: 0.02em; margin: 0 0 4px;
+  }
+  #experience .sub-role-list {
+    padding-left: 22px;
+    border-left: 2px solid rgba(60,110,113,0.45);
+    margin-left: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  #experience .sub-role { margin: 0; }
+  #experience .sub-role .role-title {
+    font-size: 15px; font-weight: 600; color: #FFFFFF; margin: 0 0 2px;
+  }
+  #experience .sub-role-meta {
+    font-size: 12.5px; color: rgba(255,255,255,0.45); margin: 0 0 12px !important;
+  }
+  #experience .sub-role ul { margin-top: 0; }
+  #experience .role-company {
+    font-size: 14px; font-weight: 600;
+    color: rgba(255,255,255,0.72); margin: 2px 0 6px;
+  }
+
+  /* --- Related work buttons --- */
+  #experience .role-projects {
+    margin-top: 16px; display: flex; flex-wrap: wrap;
+    align-items: center; gap: 10px;
+  }
+  #experience .role-proj-label {
+    font-size: 10px; color: rgba(255,255,255,0.40);
+    text-transform: uppercase; letter-spacing: 0.10em;
+    margin-right: 2px;
+  }
+  #experience .role-proj-chip {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--sans); font-size: 12px; font-weight: 500;
+    padding: 7px 14px; border-radius: 6px;
+    background: rgba(60,110,113,0.30);
+    border: 1px solid rgba(60,110,113,0.65);
+    color: #FFFFFF; text-decoration: none;
+    transition: background 0.15s, border-color 0.15s, transform 0.1s;
+    white-space: nowrap;
+  }
+  #experience .role-proj-chip::after {
+    content: '→'; font-size: 11px; opacity: 0.7;
+  }
+  #experience .role-proj-chip:hover {
+    background: rgba(60,110,113,0.55);
+    border-color: #3C6E71;
+    transform: translateY(-1px);
+  }
+
+  /* --- Employer tags on project cards --- */
+  .employer-tag {
+    display: inline-block; font-size: 10px; font-weight: 500;
+    padding: 2px 8px; border-radius: 10px; margin-left: 6px;
+    background: rgba(28,53,72,0.55);
+    border: 1px solid rgba(60,110,113,0.40);
+    color: rgba(255,255,255,0.65); letter-spacing: 0.04em;
+    vertical-align: middle;
+  }
+  .employer-tag--inkwood {
+    background: rgba(42,92,96,0.45);
+    border-color: rgba(60,110,113,0.55);
+  }
+  .featured-employer {
+    font-size: 10.5px; font-weight: 500; margin: 5px 0 14px;
+    color: rgba(255,255,255,0.45); letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+  .featured-employer--inkwood { color: rgba(60,200,180,0.60); }
+
   /* Awards: navy tint */
   #awards { background: var(--paper-deep); }
   /* Extracurricular: white */

@@ -9,8 +9,127 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+  .site-topnav {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: var(--paper);
+    box-shadow: 0 1px 0 var(--line), 0 4px 20px rgba(43,33,64,0.06);
+    padding: 0 28px;
+  }
+  .site-topnav-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 58px;
+    gap: 16px;
+  }
+  .site-topnav-brand {
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--ink);
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .site-topnav-brand.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .site-topnav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+  }
+  .site-topnav-links a {
+    display: block;
+    font-family: var(--sans);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 7px 16px;
+    border-radius: 8px;
+    border: 1.5px solid transparent;
+    background: transparent;
+    transition: all 0.18s ease;
+    white-space: nowrap;
+  }
+  .site-topnav-links a:hover {
+    color: var(--lilac-deep);
+    background: var(--lilac-pale);
+    border-color: var(--line);
+  }
+  .site-topnav-links a.active {
+    color: white;
+    background: var(--ink);
+    border-color: var(--ink);
+    box-shadow: 0 2px 8px rgba(43,33,64,0.2);
+  }
+  @media (max-width: 640px) {
+    .site-topnav-brand { display: none; }
+    .site-topnav-links { gap: 4px; }
+    .site-topnav-links a { padding: 6px 11px; font-size: 12px; }
+  }
+</style>
 </head>
 <body>
+
+  <nav class="site-topnav" id="topnav">
+    <div class="site-topnav-inner">
+      <a class="site-topnav-brand" href="#" id="navBrand">Sukanya Mukherjee</a>
+      <ul class="site-topnav-links">
+        <li><a href="#about" data-section="about">About</a></li>
+        <li><a href="#featured" data-section="featured">Featured</a></li>
+        <li><a href="#projects" data-section="projects">Projects</a></li>
+        <li><a href="#experience" data-section="experience">Experience</a></li>
+        <li><a href="#awards" data-section="awards">Awards</a></li>
+        <li><a href="#contact" data-section="contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <script>
+    (function() {
+      const brand = document.getElementById('navBrand');
+      const links = document.querySelectorAll('.site-topnav-links a[data-section]');
+      const sections = Array.from(links).map(l => document.getElementById(l.dataset.section)).filter(Boolean);
+
+      // Show brand name once hero scrolls out of view
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        const heroObs = new IntersectionObserver(entries => {
+          brand.classList.toggle('visible', !entries[0].isIntersecting);
+        }, { threshold: 0 });
+        heroObs.observe(hero);
+      }
+
+      // Highlight active nav link based on scroll position
+      const sectionObs = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            links.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`.site-topnav-links a[data-section="${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+
+      sections.forEach(s => sectionObs.observe(s));
+    })();
+  </script>
 
   <header class="hero">
     <div class="wrap">

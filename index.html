@@ -498,13 +498,13 @@
     .featured-card-visual {
       flex: 0 0 42%;
       overflow: hidden;
-      position: relative;
-      min-height: 240px;
+      aspect-ratio: 1 / 1;
+      align-self: flex-start;
     }
-    .featured-card-visual svg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: block; }
+    .featured-card-visual svg { width: 100%; height: 100%; display: block; }
     @media (max-width: 860px) {
       .featured-card { flex-direction: column; }
-      .featured-card-visual { flex: none; width: 100%; height: 220px; }
+      .featured-card-visual { flex: none; width: 100%; aspect-ratio: 1; height: auto; align-self: auto; }
       .featured-card-body { padding: 32px 28px; }
     }
   </style>
@@ -531,71 +531,81 @@
             <span class="featured-cta">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
           <div class="featured-card-visual">
-            <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+            <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <!-- Background -->
-              <rect width="420" height="260" fill="#E8F1F7"/>
+              <rect width="420" height="420" fill="#E8F1F7"/>
               <!-- Grid -->
-              <line x1="0" y1="65" x2="420" y2="65" stroke="rgba(28,53,72,0.06)" stroke-width="1"/>
-              <line x1="0" y1="130" x2="420" y2="130" stroke="rgba(28,53,72,0.06)" stroke-width="1"/>
-              <line x1="0" y1="195" x2="420" y2="195" stroke="rgba(28,53,72,0.06)" stroke-width="1"/>
-              <line x1="105" y1="0" x2="105" y2="260" stroke="rgba(28,53,72,0.06)" stroke-width="1"/>
-              <line x1="210" y1="0" x2="210" y2="260" stroke="rgba(28,53,72,0.06)" stroke-width="1"/>
-              <line x1="315" y1="0" x2="315" y2="260" stroke="rgba(28,53,72,0.06)" stroke-width="1"/>
+              <line x1="0" y1="105" x2="420" y2="105" stroke="rgba(28,53,72,0.05)" stroke-width="1"/>
+              <line x1="0" y1="210" x2="420" y2="210" stroke="rgba(28,53,72,0.05)" stroke-width="1"/>
+              <line x1="0" y1="315" x2="420" y2="315" stroke="rgba(28,53,72,0.05)" stroke-width="1"/>
+              <line x1="105" y1="0" x2="105" y2="420" stroke="rgba(28,53,72,0.05)" stroke-width="1"/>
+              <line x1="210" y1="0" x2="210" y2="420" stroke="rgba(28,53,72,0.05)" stroke-width="1"/>
+              <line x1="315" y1="0" x2="315" y2="420" stroke="rgba(28,53,72,0.05)" stroke-width="1"/>
               <!-- STEP 1: INTAKE -->
-              <rect x="18" y="22" width="108" height="96" rx="8" fill="rgba(255,255,255,0.80)" stroke="rgba(60,110,113,0.28)" stroke-width="1"/>
-              <rect x="18" y="22" width="108" height="3" rx="1.5" fill="rgba(60,110,113,0.55)"/>
-              <!-- Checkbox 1: checked -->
-              <rect x="30" y="36" width="11" height="11" rx="2.5" fill="#3C6E71" stroke="#3C6E71" stroke-width="1"/>
-              <path d="M32.5 41.5 L35 44 L40 38.5" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="47" y="39.5" width="52" height="3" rx="1.5" fill="rgba(28,53,72,0.55)"/>
-              <!-- Checkbox 2: checked -->
-              <rect x="30" y="54" width="11" height="11" rx="2.5" fill="#3C6E71" stroke="#3C6E71" stroke-width="1"/>
-              <path d="M32.5 59.5 L35 62 L40 56.5" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="47" y="57.5" width="42" height="3" rx="1.5" fill="rgba(28,53,72,0.42)"/>
-              <!-- Checkbox 3: unchecked -->
-              <rect x="30" y="72" width="11" height="11" rx="2.5" fill="none" stroke="rgba(28,53,72,0.30)" stroke-width="1"/>
-              <rect x="47" y="75.5" width="48" height="3" rx="1.5" fill="rgba(28,53,72,0.22)"/>
-              <text x="72" y="108" text-anchor="middle" fill="#3C6E71" font-size="9" font-family="Sora,sans-serif" font-weight="600" letter-spacing="1.5">INTAKE</text>
-              <!-- Arrow 1 -->
-              <line x1="130" y1="70" x2="158" y2="70" stroke="#3C6E71" stroke-width="1.5" stroke-dasharray="3,2.5"/>
-              <polygon points="156,66 163,70 156,74" fill="#3C6E71"/>
-              <!-- STEP 2: GTM BRIEF (highlighted) -->
-              <rect x="163" y="12" width="116" height="116" rx="8" fill="#FFFFFF" stroke="#3C6E71" stroke-width="1.5"/>
-              <rect x="163" y="12" width="116" height="3" rx="1.5" fill="#3C6E71"/>
-              <rect x="175" y="28" width="80" height="4" rx="2" fill="rgba(28,53,72,0.85)"/>
-              <rect x="175" y="39" width="68" height="3" rx="1.5" fill="rgba(28,53,72,0.45)"/>
-              <rect x="175" y="48" width="76" height="3" rx="1.5" fill="rgba(28,53,72,0.38)"/>
-              <rect x="175" y="57" width="60" height="3" rx="1.5" fill="rgba(28,53,72,0.32)"/>
-              <rect x="175" y="66" width="72" height="3" rx="1.5" fill="rgba(28,53,72,0.25)"/>
-              <rect x="175" y="75" width="54" height="3" rx="1.5" fill="rgba(28,53,72,0.20)"/>
-              <rect x="175" y="84" width="66" height="3" rx="1.5" fill="rgba(28,53,72,0.15)"/>
-              <text x="221" y="118" text-anchor="middle" fill="#3C6E71" font-size="9" font-family="Sora,sans-serif" font-weight="700" letter-spacing="1.5">GTM BRIEF</text>
+              <rect x="18" y="24" width="108" height="138" rx="8" fill="rgba(255,255,255,0.82)" stroke="rgba(60,110,113,0.28)" stroke-width="1"/>
+              <rect x="18" y="24" width="108" height="3" rx="1.5" fill="rgba(60,110,113,0.55)"/>
+              <rect x="30" y="38" width="11" height="11" rx="2.5" fill="#3C6E71"/>
+              <path d="M32.5 43.5 L35 46 L40 40.5" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="47" y="41.5" width="52" height="3" rx="1.5" fill="rgba(28,53,72,0.55)"/>
+              <rect x="30" y="57" width="11" height="11" rx="2.5" fill="#3C6E71"/>
+              <path d="M32.5 62.5 L35 65 L40 59.5" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="47" y="60.5" width="42" height="3" rx="1.5" fill="rgba(28,53,72,0.42)"/>
+              <rect x="30" y="76" width="11" height="11" rx="2.5" fill="#3C6E71"/>
+              <path d="M32.5 81.5 L35 84 L40 78.5" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="47" y="79.5" width="48" height="3" rx="1.5" fill="rgba(28,53,72,0.38)"/>
+              <rect x="30" y="95" width="11" height="11" rx="2.5" fill="none" stroke="rgba(28,53,72,0.28)" stroke-width="1"/>
+              <rect x="47" y="98.5" width="38" height="3" rx="1.5" fill="rgba(28,53,72,0.20)"/>
+              <rect x="30" y="114" width="11" height="11" rx="2.5" fill="none" stroke="rgba(28,53,72,0.18)" stroke-width="1"/>
+              <rect x="47" y="117.5" width="44" height="3" rx="1.5" fill="rgba(28,53,72,0.13)"/>
+              <text x="72" y="154" text-anchor="middle" fill="#3C6E71" font-size="9" font-family="Sora,sans-serif" font-weight="600" letter-spacing="1.5">INTAKE</text>
+              <!-- Arrow 1 (y=93 = center of INTAKE) -->
+              <line x1="130" y1="93" x2="158" y2="93" stroke="#3C6E71" stroke-width="1.5" stroke-dasharray="3,2.5"/>
+              <polygon points="156,89 163,93 156,97" fill="#3C6E71"/>
+              <!-- STEP 2: GTM BRIEF (highlighted, tallest) -->
+              <rect x="163" y="14" width="116" height="158" rx="8" fill="#FFFFFF" stroke="#3C6E71" stroke-width="1.5"/>
+              <rect x="163" y="14" width="116" height="3" rx="1.5" fill="#3C6E71"/>
+              <rect x="175" y="30" width="80" height="4" rx="2" fill="rgba(28,53,72,0.85)"/>
+              <rect x="175" y="42" width="68" height="3" rx="1.5" fill="rgba(28,53,72,0.45)"/>
+              <rect x="175" y="53" width="76" height="3" rx="1.5" fill="rgba(28,53,72,0.38)"/>
+              <rect x="175" y="64" width="60" height="3" rx="1.5" fill="rgba(28,53,72,0.32)"/>
+              <rect x="175" y="75" width="72" height="3" rx="1.5" fill="rgba(28,53,72,0.25)"/>
+              <rect x="175" y="86" width="54" height="3" rx="1.5" fill="rgba(28,53,72,0.20)"/>
+              <rect x="175" y="97" width="66" height="3" rx="1.5" fill="rgba(28,53,72,0.16)"/>
+              <rect x="175" y="108" width="50" height="3" rx="1.5" fill="rgba(28,53,72,0.12)"/>
+              <rect x="175" y="119" width="62" height="3" rx="1.5" fill="rgba(28,53,72,0.08)"/>
+              <text x="221" y="164" text-anchor="middle" fill="#3C6E71" font-size="9" font-family="Sora,sans-serif" font-weight="700" letter-spacing="1.5">GTM BRIEF</text>
               <!-- Arrow 2 -->
-              <line x1="283" y1="70" x2="311" y2="70" stroke="#3C6E71" stroke-width="1.5" stroke-dasharray="3,2.5"/>
-              <polygon points="309,66 316,70 309,74" fill="#3C6E71"/>
+              <line x1="283" y1="93" x2="311" y2="93" stroke="#3C6E71" stroke-width="1.5" stroke-dasharray="3,2.5"/>
+              <polygon points="309,89 316,93 309,97" fill="#3C6E71"/>
               <!-- STEP 3: LAUNCH -->
-              <rect x="316" y="22" width="86" height="96" rx="8" fill="rgba(255,255,255,0.80)" stroke="rgba(60,110,113,0.28)" stroke-width="1"/>
-              <rect x="316" y="22" width="86" height="3" rx="1.5" fill="rgba(60,110,113,0.55)"/>
-              <path d="M359 45 L363 62 L359 58 L355 62 Z" fill="#3C6E71"/>
-              <circle cx="359" cy="52" r="3.5" fill="rgba(60,110,113,0.35)"/>
-              <ellipse cx="359" cy="66" rx="5" ry="3.5" fill="rgba(60,110,113,0.25)"/>
-              <text x="359" y="108" text-anchor="middle" fill="#3C6E71" font-size="9" font-family="Sora,sans-serif" font-weight="600" letter-spacing="1.5">LAUNCH</text>
-              <!-- Stats -->
-              <rect x="18" y="148" width="116" height="92" rx="8" fill="rgba(255,255,255,0.70)" stroke="rgba(60,110,113,0.22)" stroke-width="1"/>
-              <text x="76" y="184" text-anchor="middle" fill="#1C3548" font-size="30" font-family="Sora,sans-serif" font-weight="700">&#x2212;40%</text>
-              <rect x="34" y="190" width="84" height="1" fill="rgba(60,110,113,0.30)"/>
-              <text x="76" y="206" text-anchor="middle" fill="rgba(28,53,72,0.60)" font-size="8.5" font-family="Sora,sans-serif">doc turnaround</text>
-              <text x="76" y="219" text-anchor="middle" fill="rgba(28,53,72,0.42)" font-size="7.5" font-family="Sora,sans-serif">10+ concurrent programmes</text>
-              <rect x="149" y="148" width="116" height="92" rx="8" fill="rgba(255,255,255,0.70)" stroke="rgba(60,110,113,0.22)" stroke-width="1"/>
-              <text x="207" y="184" text-anchor="middle" fill="#1C3548" font-size="30" font-family="Sora,sans-serif" font-weight="700">5+ hrs</text>
-              <rect x="165" y="190" width="84" height="1" fill="rgba(60,110,113,0.30)"/>
-              <text x="207" y="206" text-anchor="middle" fill="rgba(28,53,72,0.60)" font-size="8.5" font-family="Sora,sans-serif">reclaimed per week</text>
-              <text x="207" y="219" text-anchor="middle" fill="rgba(28,53,72,0.42)" font-size="7.5" font-family="Sora,sans-serif">manual reporting removed</text>
-              <rect x="280" y="148" width="122" height="92" rx="8" fill="rgba(255,255,255,0.70)" stroke="rgba(60,110,113,0.22)" stroke-width="1"/>
-              <text x="341" y="184" text-anchor="middle" fill="#1C3548" font-size="30" font-family="Sora,sans-serif" font-weight="700">100%</text>
-              <rect x="296" y="190" width="90" height="1" fill="rgba(60,110,113,0.30)"/>
-              <text x="341" y="206" text-anchor="middle" fill="rgba(28,53,72,0.60)" font-size="8.5" font-family="Sora,sans-serif">on-schedule delivery</text>
-              <text x="341" y="219" text-anchor="middle" fill="rgba(28,53,72,0.42)" font-size="7.5" font-family="Sora,sans-serif">zero launch-day escalations</text>
+              <rect x="316" y="24" width="86" height="138" rx="8" fill="rgba(255,255,255,0.82)" stroke="rgba(60,110,113,0.28)" stroke-width="1"/>
+              <rect x="316" y="24" width="86" height="3" rx="1.5" fill="rgba(60,110,113,0.55)"/>
+              <path d="M359 52 L363 74 L359 70 L355 74 Z" fill="#3C6E71"/>
+              <circle cx="359" cy="62" r="4.5" fill="rgba(60,110,113,0.30)"/>
+              <ellipse cx="359" cy="78" rx="6" ry="4" fill="rgba(60,110,113,0.22)"/>
+              <rect x="329" y="97" width="56" height="3" rx="1.5" fill="rgba(28,53,72,0.25)"/>
+              <rect x="329" y="110" width="46" height="3" rx="1.5" fill="rgba(28,53,72,0.18)"/>
+              <rect x="329" y="123" width="52" height="3" rx="1.5" fill="rgba(28,53,72,0.12)"/>
+              <text x="359" y="154" text-anchor="middle" fill="#3C6E71" font-size="9" font-family="Sora,sans-serif" font-weight="600" letter-spacing="1.5">LAUNCH</text>
+              <!-- Stats row -->
+              <rect x="18" y="184" width="116" height="140" rx="8" fill="rgba(255,255,255,0.70)" stroke="rgba(60,110,113,0.22)" stroke-width="1"/>
+              <text x="76" y="233" text-anchor="middle" fill="#1C3548" font-size="34" font-family="Sora,sans-serif" font-weight="700">&#x2212;40%</text>
+              <rect x="34" y="242" width="84" height="1" fill="rgba(60,110,113,0.28)"/>
+              <text x="76" y="259" text-anchor="middle" fill="rgba(28,53,72,0.60)" font-size="8.5" font-family="Sora,sans-serif">doc turnaround</text>
+              <text x="76" y="275" text-anchor="middle" fill="rgba(28,53,72,0.40)" font-size="7.5" font-family="Sora,sans-serif">10+ concurrent programmes</text>
+              <rect x="149" y="184" width="116" height="140" rx="8" fill="rgba(255,255,255,0.70)" stroke="rgba(60,110,113,0.22)" stroke-width="1"/>
+              <text x="207" y="233" text-anchor="middle" fill="#1C3548" font-size="34" font-family="Sora,sans-serif" font-weight="700">5+ hrs</text>
+              <rect x="165" y="242" width="84" height="1" fill="rgba(60,110,113,0.28)"/>
+              <text x="207" y="259" text-anchor="middle" fill="rgba(28,53,72,0.60)" font-size="8.5" font-family="Sora,sans-serif">reclaimed per week</text>
+              <text x="207" y="275" text-anchor="middle" fill="rgba(28,53,72,0.40)" font-size="7.5" font-family="Sora,sans-serif">manual reporting removed</text>
+              <rect x="280" y="184" width="122" height="140" rx="8" fill="rgba(255,255,255,0.70)" stroke="rgba(60,110,113,0.22)" stroke-width="1"/>
+              <text x="341" y="233" text-anchor="middle" fill="#1C3548" font-size="34" font-family="Sora,sans-serif" font-weight="700">100%</text>
+              <rect x="296" y="242" width="90" height="1" fill="rgba(60,110,113,0.28)"/>
+              <text x="341" y="259" text-anchor="middle" fill="rgba(28,53,72,0.60)" font-size="8.5" font-family="Sora,sans-serif">on-schedule delivery</text>
+              <text x="341" y="275" text-anchor="middle" fill="rgba(28,53,72,0.40)" font-size="7.5" font-family="Sora,sans-serif">zero launch-day escalations</text>
+              <!-- Bottom tool strip -->
+              <rect x="18" y="350" width="384" height="44" rx="8" fill="rgba(255,255,255,0.50)" stroke="rgba(60,110,113,0.18)" stroke-width="1"/>
+              <text x="210" y="375" text-anchor="middle" fill="rgba(28,53,72,0.38)" font-size="8" font-family="Sora,sans-serif" letter-spacing="1.8">SALESFORCE · ASANA · CLAUDE · COPILOT</text>
             </svg>
           </div>
         </a>
@@ -609,45 +619,60 @@
             <span class="featured-cta">Read more <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
           <div class="featured-card-visual">
-            <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+            <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <!-- Background -->
-              <rect width="420" height="260" fill="#DFF0EF"/>
+              <rect width="420" height="420" fill="#DFF0EF"/>
               <!-- Grid -->
-              <line x1="0" y1="65" x2="420" y2="65" stroke="rgba(28,53,72,0.06)" stroke-width="1"/>
-              <line x1="0" y1="130" x2="420" y2="130" stroke="rgba(28,53,72,0.06)" stroke-width="1"/>
-              <line x1="0" y1="195" x2="420" y2="195" stroke="rgba(28,53,72,0.06)" stroke-width="1"/>
-              <line x1="140" y1="0" x2="140" y2="260" stroke="rgba(28,53,72,0.06)" stroke-width="1"/>
-              <line x1="280" y1="0" x2="280" y2="260" stroke="rgba(28,53,72,0.06)" stroke-width="1"/>
-              <!-- BIG STAT left -->
-              <text x="20" y="98" fill="#1C3548" font-size="64" font-family="Sora,sans-serif" font-weight="700" letter-spacing="-1">117%</text>
-              <rect x="20" y="108" width="122" height="1.5" fill="rgba(60,110,113,0.45)"/>
-              <text x="20" y="126" fill="rgba(28,53,72,0.65)" font-size="10" font-family="Sora,sans-serif" font-weight="500">of target achieved</text>
-              <text x="20" y="142" fill="rgba(28,53,72,0.45)" font-size="10" font-family="Sora,sans-serif">across 3 markets</text>
+              <line x1="0" y1="105" x2="420" y2="105" stroke="rgba(28,53,72,0.05)" stroke-width="1"/>
+              <line x1="0" y1="210" x2="420" y2="210" stroke="rgba(28,53,72,0.05)" stroke-width="1"/>
+              <line x1="0" y1="315" x2="420" y2="315" stroke="rgba(28,53,72,0.05)" stroke-width="1"/>
+              <line x1="140" y1="0" x2="140" y2="420" stroke="rgba(28,53,72,0.05)" stroke-width="1"/>
+              <line x1="280" y1="0" x2="280" y2="420" stroke="rgba(28,53,72,0.05)" stroke-width="1"/>
+              <!-- BIG STAT left column -->
+              <text x="20" y="112" fill="#1C3548" font-size="68" font-family="Sora,sans-serif" font-weight="700" letter-spacing="-1">117%</text>
+              <rect x="20" y="122" width="122" height="1.5" fill="rgba(60,110,113,0.45)"/>
+              <text x="20" y="140" fill="rgba(28,53,72,0.65)" font-size="10" font-family="Sora,sans-serif" font-weight="500">of target achieved</text>
+              <text x="20" y="157" fill="rgba(28,53,72,0.45)" font-size="10" font-family="Sora,sans-serif">across 3 markets</text>
               <!-- Loyalty badge -->
-              <rect x="20" y="168" width="122" height="66" rx="8" fill="rgba(255,255,255,0.75)" stroke="rgba(60,110,113,0.35)" stroke-width="1"/>
-              <text x="81" y="194" text-anchor="middle" fill="#3C6E71" font-size="22" font-family="Sora,sans-serif">&#x2605;</text>
-              <text x="81" y="212" text-anchor="middle" fill="rgba(28,53,72,0.70)" font-size="8.5" font-family="Sora,sans-serif" font-weight="500">Loyalty programme</text>
-              <text x="81" y="224" text-anchor="middle" fill="rgba(28,53,72,0.45)" font-size="7.5" font-family="Sora,sans-serif">mid-campaign add-on</text>
-              <!-- Globe right side -->
-              <circle cx="316" cy="122" r="86" fill="none" stroke="rgba(28,53,72,0.12)" stroke-width="1.5"/>
-              <ellipse cx="316" cy="122" rx="86" ry="27" fill="none" stroke="rgba(28,53,72,0.08)" stroke-width="1"/>
-              <ellipse cx="316" cy="122" rx="86" ry="55" fill="none" stroke="rgba(28,53,72,0.08)" stroke-width="1"/>
-              <ellipse cx="316" cy="122" rx="28" ry="86" fill="none" stroke="rgba(28,53,72,0.08)" stroke-width="1"/>
-              <ellipse cx="316" cy="122" rx="60" ry="86" fill="none" stroke="rgba(28,53,72,0.08)" stroke-width="1"/>
+              <rect x="20" y="180" width="122" height="86" rx="8" fill="rgba(255,255,255,0.75)" stroke="rgba(60,110,113,0.35)" stroke-width="1"/>
+              <text x="81" y="210" text-anchor="middle" fill="#3C6E71" font-size="24" font-family="Sora,sans-serif">&#x2605;</text>
+              <text x="81" y="232" text-anchor="middle" fill="rgba(28,53,72,0.70)" font-size="8.5" font-family="Sora,sans-serif" font-weight="500">Loyalty programme</text>
+              <text x="81" y="248" text-anchor="middle" fill="rgba(28,53,72,0.45)" font-size="7.5" font-family="Sora,sans-serif">mid-campaign add-on</text>
+              <!-- Market breakdown pill -->
+              <rect x="20" y="285" width="122" height="86" rx="8" fill="rgba(255,255,255,0.55)" stroke="rgba(60,110,113,0.25)" stroke-width="1"/>
+              <text x="81" y="308" text-anchor="middle" fill="rgba(28,53,72,0.50)" font-size="8" font-family="Sora,sans-serif" font-weight="600" letter-spacing="1">PERFORMANCE</text>
+              <rect x="32" y="316" width="96" height="6" rx="3" fill="rgba(60,110,113,0.15)"/>
+              <rect x="32" y="316" width="96" height="6" rx="3" fill="#3C6E71"/>
+              <text x="32" y="338" fill="rgba(28,53,72,0.55)" font-size="7.5" font-family="Sora,sans-serif">EMEA</text>
+              <rect x="32" y="330" width="72" height="5" rx="2.5" fill="rgba(60,110,113,0.15)"/>
+              <rect x="32" y="330" width="72" height="5" rx="2.5" fill="rgba(60,110,113,0.65)"/>
+              <text x="32" y="352" fill="rgba(28,53,72,0.55)" font-size="7.5" font-family="Sora,sans-serif">EU</text>
+              <rect x="32" y="344" width="80" height="5" rx="2.5" fill="rgba(60,110,113,0.15)"/>
+              <rect x="32" y="344" width="80" height="5" rx="2.5" fill="rgba(60,110,113,0.50)"/>
+              <text x="32" y="366" fill="rgba(28,53,72,0.55)" font-size="7.5" font-family="Sora,sans-serif">S. America</text>
+              <!-- Globe right side — centered at cy=205 -->
+              <circle cx="310" cy="205" r="108" fill="none" stroke="rgba(28,53,72,0.12)" stroke-width="1.5"/>
+              <ellipse cx="310" cy="205" rx="108" ry="34" fill="none" stroke="rgba(28,53,72,0.08)" stroke-width="1"/>
+              <ellipse cx="310" cy="205" rx="108" ry="68" fill="none" stroke="rgba(28,53,72,0.08)" stroke-width="1"/>
+              <ellipse cx="310" cy="205" rx="35" ry="108" fill="none" stroke="rgba(28,53,72,0.08)" stroke-width="1"/>
+              <ellipse cx="310" cy="205" rx="75" ry="108" fill="none" stroke="rgba(28,53,72,0.08)" stroke-width="1"/>
               <!-- Flight paths -->
-              <path d="M276 80 Q294 52 340 84" fill="none" stroke="#3C6E71" stroke-width="1.5" stroke-dasharray="4,3"/>
-              <path d="M340 84 Q362 138 332 182" fill="none" stroke="#3C6E71" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.75"/>
-              <path d="M276 80 Q248 148 332 182" fill="none" stroke="rgba(60,110,113,0.45)" stroke-width="1" stroke-dasharray="3,5"/>
+              <path d="M268 115 Q288 82 340 118" fill="none" stroke="#3C6E71" stroke-width="1.5" stroke-dasharray="4,3"/>
+              <path d="M340 118 Q366 220 336 296" fill="none" stroke="#3C6E71" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.75"/>
+              <path d="M268 115 Q238 220 336 296" fill="none" stroke="rgba(60,110,113,0.42)" stroke-width="1" stroke-dasharray="3,5"/>
               <!-- Market pins -->
-              <circle cx="276" cy="80" r="11" fill="#FFFFFF" stroke="#3C6E71" stroke-width="1.5"/>
-              <circle cx="276" cy="80" r="5.5" fill="#3C6E71"/>
-              <text x="262" y="64" text-anchor="middle" fill="rgba(28,53,72,0.80)" font-size="8.5" font-family="Sora,sans-serif" font-weight="600">EMEA</text>
-              <circle cx="340" cy="84" r="11" fill="#FFFFFF" stroke="#3C6E71" stroke-width="1.5"/>
-              <circle cx="340" cy="84" r="5.5" fill="#3C6E71"/>
-              <text x="356" y="68" text-anchor="middle" fill="rgba(28,53,72,0.80)" font-size="8.5" font-family="Sora,sans-serif" font-weight="600">EU</text>
-              <circle cx="332" cy="182" r="11" fill="#FFFFFF" stroke="#3C6E71" stroke-width="1.5"/>
-              <circle cx="332" cy="182" r="5.5" fill="#3C6E71"/>
-              <text x="352" y="200" text-anchor="middle" fill="rgba(28,53,72,0.80)" font-size="8.5" font-family="Sora,sans-serif" font-weight="600">S. AM</text>
+              <circle cx="268" cy="115" r="12" fill="#FFFFFF" stroke="#3C6E71" stroke-width="1.5"/>
+              <circle cx="268" cy="115" r="6" fill="#3C6E71"/>
+              <text x="254" y="98" text-anchor="middle" fill="rgba(28,53,72,0.80)" font-size="8.5" font-family="Sora,sans-serif" font-weight="600">EMEA</text>
+              <circle cx="340" cy="118" r="12" fill="#FFFFFF" stroke="#3C6E71" stroke-width="1.5"/>
+              <circle cx="340" cy="118" r="6" fill="#3C6E71"/>
+              <text x="358" y="100" text-anchor="middle" fill="rgba(28,53,72,0.80)" font-size="8.5" font-family="Sora,sans-serif" font-weight="600">EU</text>
+              <circle cx="336" cy="296" r="12" fill="#FFFFFF" stroke="#3C6E71" stroke-width="1.5"/>
+              <circle cx="336" cy="296" r="6" fill="#3C6E71"/>
+              <text x="358" y="316" text-anchor="middle" fill="rgba(28,53,72,0.80)" font-size="8.5" font-family="Sora,sans-serif" font-weight="600">S. AM</text>
+              <!-- Bottom label -->
+              <rect x="18" y="390" width="384" height="16" rx="4" fill="rgba(255,255,255,0.35)"/>
+              <text x="210" y="402" text-anchor="middle" fill="rgba(28,53,72,0.38)" font-size="7.5" font-family="Sora,sans-serif" letter-spacing="1.8">INKWOOD RESEARCH · EMEA · EUROPE · SOUTH AMERICA</text>
             </svg>
           </div>
         </a>

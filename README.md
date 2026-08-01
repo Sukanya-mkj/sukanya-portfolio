@@ -22,10 +22,11 @@ Plain HTML · CSS · JavaScript · GitHub Pages · Formspree (for the CV form)
 No frameworks. No build step. Push to deploy.
 
 ## Structure
-index.html — main portfolio page
-style.css — all styles
-favicon.svg — cursive S favicon
-projects/ — individual case study pages
+
+- index.html — main portfolio page
+- style.css — all styles
+- favicon.svg — cursive S favicon
+- projects/ — individual case study pages
 
 ## Contact
 

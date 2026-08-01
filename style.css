@@ -540,6 +540,70 @@ h2{
 }
 .two-col li:last-child{margin-bottom:0;}
 
+/* ---------- Education cards ---------- */
+.edu-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+@media(max-width:700px){
+  .edu-grid{grid-template-columns:1fr;}
+}
+.edu-card{
+  position:relative;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:28px 30px;
+  background:var(--paper);
+  overflow:hidden;
+}
+.edu-card-bar{
+  position:absolute;
+  top:0; left:0; right:0;
+  height:3px;
+  background:linear-gradient(90deg, var(--lilac), var(--rose));
+}
+.edu-year{
+  font-family:var(--sans);
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--lilac-deep);
+  margin:0 0 10px;
+}
+.edu-degree{
+  font-family:var(--serif);
+  font-weight:600;
+  font-size:1.15rem;
+  color:var(--ink);
+  margin:0 0 6px;
+}
+.edu-spec{
+  font-size:0.92rem;
+  color:var(--ink-soft);
+  margin:0 0 4px;
+}
+.edu-school{
+  font-size:0.88rem;
+  color:var(--ink-soft);
+  margin:0 0 14px;
+}
+.edu-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:12px;
+}
+.edu-tag{
+  font-size:11px;
+  font-weight:500;
+  color:var(--lilac-deep);
+  background:var(--lilac-pale);
+  border-radius:20px;
+  padding:3px 10px;
+}
+
 /* ---------- Contact / footer ---------- */
 footer{padding:64px 0 80px;}
 footer p.lead{

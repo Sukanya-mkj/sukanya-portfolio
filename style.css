@@ -111,13 +111,15 @@ header.hero .wrap{
   flex-shrink:0;
 }
 .hero-banner-text{
-  font-family:var(--serif);
-  font-style:italic;
-  font-weight:500;
-  font-size:clamp(16px,2.2vw,26px);
+  font-family:var(--sans);
+  font-style:normal;
+  font-weight:600;
+  font-size:clamp(11px,1.4vw,15px);
+  letter-spacing:0.18em;
+  text-transform:uppercase;
   color:#FFFFFF;
   text-align:center;
-  white-space:nowrap;
+  line-height:1.7;
 }
 .hero-banner-deco{
   display:block;
@@ -206,15 +208,7 @@ section + section{border-top:none;}
   margin-bottom:32px;
 }
 .section-icon{
-  width:38px;
-  height:38px;
-  border-radius:10px;
-  background:var(--lilac-pale);
-  color:var(--lilac-deep);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-shrink:0;
+  display:none;
 }
 .section-num{
   font-family:var(--mono);

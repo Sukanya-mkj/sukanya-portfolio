@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sukanya Mukherjee | Marketing Strategy & Operations PMO</title>
+<title>Sukanya Mukherjee | PMO &amp; Marketing Operations</title>
 <meta name="description" content="Marketing Operations Project Manager with 6+ years leading cross-functional programs for Fortune 500 and global enterprises, integrating Agentic AI to accelerate delivery.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
     <div class="wrap">
       <p class="doc-tag">Portfolio</p>
       <h1 class="name">Sukanya Mukherjee</h1>
-      <p class="tagline">Marketing Strategy & Operations PMO | Building the Systems Behind Great Marketing</p>
+      <p class="tagline">PMO &amp; Marketing Operations. I turn ambiguity into structure, and structure into results people can feel.</p>
       <div class="meta-row">
         <span><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Bengaluru, India</span>
         <span><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:sukanyamukherjee17@gmail.com">sukanyamukherjee17@gmail.com</a></span>
@@ -38,47 +38,271 @@
     </div>
   </section>
 
-  <section id="featured" style="background:linear-gradient(135deg, var(--lilac-pale) 0%, var(--paper-raised) 100%); border-bottom:1px solid var(--line);">
+  <!-- ── FEATURED PROJECTS ── -->
+  <section id="featured">
+  <style>
+    #featured {
+      background: var(--ink);
+      padding: 80px 0 72px;
+      border-top: none !important;
+    }
+    #featured + #projects { border-top: none; }
+    #featured .section-head h2 { color: white; }
+    #featured .section-head p {
+      color: rgba(255,255,255,0.45);
+      font-family: var(--mono);
+      font-size: 13px;
+      margin: 5px 0 0;
+    }
+    #featured .section-icon {
+      background: rgba(142,111,219,0.18);
+      color: var(--lilac);
+    }
+    .featured-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .featured-card {
+      display: flex;
+      align-items: stretch;
+      border-radius: 18px;
+      overflow: hidden;
+      text-decoration: none;
+      color: white;
+      border: 1px solid rgba(142,111,219,0.2);
+      background: rgba(255,255,255,0.03);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      min-height: 240px;
+    }
+    .featured-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 28px 64px rgba(0,0,0,0.45);
+      border-color: rgba(142,111,219,0.55);
+    }
+    .featured-card-body {
+      flex: 1;
+      padding: 44px 48px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .featured-tag {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--lilac);
+      background: rgba(142,111,219,0.14);
+      border: 1px solid rgba(142,111,219,0.3);
+      border-radius: 20px;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+    .featured-card h3 {
+      font-family: var(--serif);
+      font-weight: 600;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      line-height: 1.15;
+      margin: 0 0 12px;
+      color: white;
+      letter-spacing: -0.01em;
+    }
+    .featured-card p {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.55);
+      margin: 0 0 22px;
+      line-height: 1.7;
+      max-width: 400px;
+    }
+    .featured-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--mono);
+      font-size: 12.5px;
+      color: var(--lilac);
+      transition: gap 0.2s ease;
+    }
+    .featured-card:hover .featured-cta { gap: 14px; }
+    .featured-cta svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+    .featured-card-visual {
+      width: 420px;
+      flex-shrink: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: stretch;
+    }
+    .featured-card-visual svg { width: 100%; height: 100%; display: block; }
+    @media (max-width: 860px) {
+      .featured-card { flex-direction: column; }
+      .featured-card-visual { width: 100%; height: 220px; }
+      .featured-card-body { padding: 32px 28px; }
+    }
+  </style>
+
     <div class="wrap">
       <div class="section-head">
-        <span class="section-icon"><svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></span>
+        <span class="section-icon">
+          <svg class="icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" stroke="none"/></svg>
+        </span>
         <div>
-          <h2 style="margin-bottom:4px;">Featured Projects</h2>
-          <p style="font-family:var(--mono); font-size:13px; color:var(--ink-soft); margin:0;">GTM Strategy, Campaign Operations &amp; Multi-Market Execution</p>
+          <h2>Featured Projects</h2>
+          <p>GTM Strategy, Campaign Operations &amp; Multi-Market Execution</p>
         </div>
       </div>
-      <div class="project-grid">
 
-        <a class="project-card" href="projects/gtm-workflow-enterprise-launch.html">
-          <span class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-          <span class="case-tab">08</span>
-          <h3>GTM Workflow, Enterprise Product Launch</h3>
-          <span class="card-sub">GTM Lead &amp; Program Manager</span>
-          <p class="card-hook">A product ready to ship, a go-to-market that was not, and four cross-functional teams that needed a single source of truth.</p>
+      <div class="featured-cards">
+
+        <!-- Card 1: GTM (dark purple) -->
+        <a class="featured-card" href="projects/gtm-workflow-enterprise-launch.html">
+          <div class="featured-card-body">
+            <span class="featured-tag">GTM &amp; Operations</span>
+            <h3>Enterprise Product Launch &amp; AI-Augmented GTM Workflow</h3>
+            <p>A product ready to ship with no go-to-market behind it. Four teams, one GTM brief, and an AI-augmented workflow that cut documentation time by 40% and became the team's new standard.</p>
+            <span class="featured-cta">Read case study <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+          <div class="featured-card-visual">
+            <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="gtmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1A1035"/>
+                  <stop offset="100%" stop-color="#3A2468"/>
+                </linearGradient>
+                <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="rgba(255,255,255,0.12)"/>
+                  <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+                </linearGradient>
+                <filter id="glow"><feGaussianBlur stdDeviation="10"/></filter>
+              </defs>
+              <!-- Background -->
+              <rect width="420" height="260" fill="url(#gtmBg)"/>
+              <!-- Glow blobs -->
+              <circle cx="340" cy="55" r="75" fill="#6E4FC4" opacity="0.14" filter="url(#glow)"/>
+              <circle cx="70" cy="220" r="60" fill="#C98BC9" opacity="0.10" filter="url(#glow)"/>
+              <!-- Dot grid -->
+              <g fill="#8E6FDB" opacity="0.09">
+                <circle cx="40" cy="36" r="1.5"/><circle cx="80" cy="36" r="1.5"/><circle cx="120" cy="36" r="1.5"/><circle cx="160" cy="36" r="1.5"/><circle cx="200" cy="36" r="1.5"/><circle cx="240" cy="36" r="1.5"/><circle cx="280" cy="36" r="1.5"/><circle cx="320" cy="36" r="1.5"/><circle cx="360" cy="36" r="1.5"/><circle cx="400" cy="36" r="1.5"/>
+                <circle cx="40" cy="76" r="1.5"/><circle cx="80" cy="76" r="1.5"/><circle cx="120" cy="76" r="1.5"/><circle cx="160" cy="76" r="1.5"/><circle cx="200" cy="76" r="1.5"/><circle cx="240" cy="76" r="1.5"/><circle cx="280" cy="76" r="1.5"/><circle cx="320" cy="76" r="1.5"/><circle cx="360" cy="76" r="1.5"/><circle cx="400" cy="76" r="1.5"/>
+                <circle cx="40" cy="116" r="1.5"/><circle cx="80" cy="116" r="1.5"/><circle cx="120" cy="116" r="1.5"/><circle cx="160" cy="116" r="1.5"/><circle cx="200" cy="116" r="1.5"/><circle cx="240" cy="116" r="1.5"/><circle cx="280" cy="116" r="1.5"/><circle cx="320" cy="116" r="1.5"/><circle cx="360" cy="116" r="1.5"/><circle cx="400" cy="116" r="1.5"/>
+              </g>
+              <!-- Connector lines -->
+              <line x1="95" y1="126" x2="148" y2="126" stroke="#8E6FDB" stroke-width="1.5" opacity="0.65"/>
+              <polygon points="148,122 156,126 148,130" fill="#8E6FDB" opacity="0.65"/>
+              <line x1="232" y1="126" x2="282" y2="126" stroke="#8E6FDB" stroke-width="1.5" opacity="0.65"/>
+              <polygon points="282,122 290,126 282,130" fill="#8E6FDB" opacity="0.65"/>
+              <line x1="190" y1="102" x2="265" y2="62" stroke="#C98BC9" stroke-width="1" stroke-dasharray="4,3" opacity="0.55"/>
+              <!-- Node 1: GTM Brief -->
+              <rect x="28" y="96" width="70" height="60" rx="14" fill="#6E4FC4"/>
+              <rect x="28" y="96" width="70" height="60" rx="14" fill="url(#nodeGrad)"/>
+              <rect x="40" y="110" width="46" height="4" rx="2" fill="white" opacity="0.9"/>
+              <rect x="40" y="118" width="36" height="3" rx="1.5" fill="white" opacity="0.55"/>
+              <rect x="40" y="125" width="40" height="3" rx="1.5" fill="white" opacity="0.55"/>
+              <rect x="40" y="132" width="28" height="3" rx="1.5" fill="white" opacity="0.35"/>
+              <!-- Node 2: Team Align -->
+              <rect x="154" y="96" width="82" height="60" rx="14" fill="#8E6FDB"/>
+              <rect x="154" y="96" width="82" height="60" rx="14" fill="url(#nodeGrad)"/>
+              <circle cx="183" cy="118" r="7" fill="white" opacity="0.85"/>
+              <path d="M172 142 Q183 134 194 142" fill="none" stroke="white" stroke-width="2" opacity="0.7"/>
+              <circle cx="202" cy="120" r="5.5" fill="white" opacity="0.6"/>
+              <path d="M193 142 Q202 136 211 142" fill="none" stroke="white" stroke-width="1.5" opacity="0.45"/>
+              <!-- Node 3: Launch -->
+              <rect x="288" y="96" width="70" height="60" rx="14" fill="#6E4FC4"/>
+              <rect x="288" y="96" width="70" height="60" rx="14" fill="url(#nodeGrad)"/>
+              <path d="M319 146 L323 118 L327 146 Z" fill="white" opacity="0.85"/>
+              <path d="M315 139 Q312 145 315 148 L319 146 Z" fill="white" opacity="0.55"/>
+              <path d="M327 146 Q330 148 333 145 L327 139 Z" fill="white" opacity="0.55"/>
+              <circle cx="323" cy="126" r="4" fill="white" opacity="0.75"/>
+              <!-- AI Node -->
+              <circle cx="292" cy="52" r="26" fill="rgba(201,139,201,0.12)" stroke="#C98BC9" stroke-width="1"/>
+              <text x="292" y="46" text-anchor="middle" fill="#C98BC9" font-size="11" font-family="IBM Plex Mono,monospace" font-weight="500">AI</text>
+              <text x="292" y="61" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-size="9" font-family="IBM Plex Mono,monospace">Ops</text>
+              <!-- Labels -->
+              <text x="63" y="174" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8.5" font-family="IBM Plex Mono,monospace">GTM Brief</text>
+              <text x="195" y="174" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8.5" font-family="IBM Plex Mono,monospace">Team Align</text>
+              <text x="323" y="174" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8.5" font-family="IBM Plex Mono,monospace">Launch</text>
+              <!-- Stat pills -->
+              <rect x="28" y="192" width="102" height="40" rx="9" fill="rgba(110,79,196,0.22)" stroke="rgba(142,111,219,0.28)" stroke-width="1"/>
+              <text x="79" y="207" text-anchor="middle" fill="#8E6FDB" font-size="14" font-family="Fraunces,Georgia,serif" font-weight="600">−40%</text>
+              <text x="79" y="223" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8" font-family="IBM Plex Mono,monospace">doc turnaround</text>
+              <rect x="144" y="192" width="102" height="40" rx="9" fill="rgba(201,139,201,0.14)" stroke="rgba(201,139,201,0.28)" stroke-width="1"/>
+              <text x="195" y="207" text-anchor="middle" fill="#C98BC9" font-size="14" font-family="Fraunces,Georgia,serif" font-weight="600">5+ hrs</text>
+              <text x="195" y="223" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8" font-family="IBM Plex Mono,monospace">reclaimed/week</text>
+              <rect x="260" y="192" width="102" height="40" rx="9" fill="rgba(110,79,196,0.22)" stroke="rgba(142,111,219,0.28)" stroke-width="1"/>
+              <text x="311" y="207" text-anchor="middle" fill="#8E6FDB" font-size="14" font-family="Fraunces,Georgia,serif" font-weight="600">100%</text>
+              <text x="311" y="223" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8" font-family="IBM Plex Mono,monospace">on schedule</text>
+              <!-- Sparkles -->
+              <text x="270" y="36" fill="#C98BC9" font-size="14" opacity="0.45">✦</text>
+              <text x="390" y="190" fill="#8E6FDB" font-size="18" opacity="0.3">✦</text>
+              <text x="20" y="60" fill="#8E6FDB" font-size="10" opacity="0.3">✦</text>
+            </svg>
+          </div>
         </a>
 
-        <a class="project-card" href="projects/gtm-workflow-ai-operations.html">
-          <span class="card-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg></span>
-          <span class="case-tab">09</span>
-          <h3>GTM Workflow, AI-Augmented Operations</h3>
-          <span class="card-sub">GTM Operations Lead</span>
-          <p class="card-hook">The team was capable. The overhead was killing their pace. Here is how embedding AI into the workflow gave the hours back.</p>
-        </a>
-
-        <a class="project-card" href="projects/global-travel-campaign-launch.html">
-          <span class="card-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span>
-          <span class="case-tab">10</span>
-          <h3>Global Travel Campaign Launch</h3>
-          <span class="card-sub">End-to-End Marketing Strategist &amp; Campaign Lead</span>
-          <p class="card-hook">Three regions, one campaign framework, and a target that ended up at 117 percent. Here is how the strategy held across EMEA, EU, and South America.</p>
-        </a>
-
-        <a class="project-card" href="projects/travel-loyalty-program-emea.html">
-          <span class="card-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s-8-4.5-8-11a5 5 0 0 1 8-4 5 5 0 0 1 8 4c0 6.5-8 11-8 11z"/></svg></span>
-          <span class="case-tab">11</span>
-          <h3>Loyalty Programme, Multi-Market Scale</h3>
-          <span class="card-sub">Marketing Strategist &amp; Programme Lead</span>
-          <p class="card-hook">A loyalty programme added mid-campaign, across three global markets, without moving the launch date. Here is how two strategies ran in the same hand.</p>
+        <!-- Card 2: Travel + Loyalty (warm gradient) -->
+        <a class="featured-card" href="projects/global-travel-campaign-launch.html" style="border-color:rgba(201,139,201,0.2);">
+          <div class="featured-card-body">
+            <span class="featured-tag" style="color:var(--rose);background:rgba(201,139,201,0.12);border-color:rgba(201,139,201,0.28);">Travel &amp; Hospitality</span>
+            <h3>Global Campaign &amp; Loyalty Programme Across Three Markets</h3>
+            <p>Three regions, one campaign framework, a loyalty programme layered in mid-campaign — and a final result of 117% of target across EMEA, Europe, and South America.</p>
+            <span class="featured-cta" style="color:var(--rose);">Read case study <svg viewBox="0 0 24 24" style="stroke:var(--rose)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+          <div class="featured-card-visual">
+            <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="travelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#3D2070"/>
+                  <stop offset="50%" stop-color="#7A3A8A"/>
+                  <stop offset="100%" stop-color="#C98BC9"/>
+                </linearGradient>
+                <filter id="tglow"><feGaussianBlur stdDeviation="12"/></filter>
+              </defs>
+              <!-- Background -->
+              <rect width="420" height="260" fill="url(#travelBg)"/>
+              <!-- Glow blobs -->
+              <circle cx="340" cy="80" r="90" fill="#C98BC9" opacity="0.15" filter="url(#tglow)"/>
+              <circle cx="60" cy="200" r="70" fill="#6E4FC4" opacity="0.2" filter="url(#tglow)"/>
+              <!-- Globe -->
+              <circle cx="270" cy="138" r="95" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+              <ellipse cx="270" cy="138" rx="95" ry="30" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+              <ellipse cx="270" cy="138" rx="95" ry="60" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+              <ellipse cx="270" cy="138" rx="30" ry="95" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+              <ellipse cx="270" cy="138" rx="65" ry="95" fill="none" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+              <!-- Flight paths -->
+              <path d="M 205 88 Q 240 58 300 88" fill="none" stroke="rgba(255,255,255,0.55)" stroke-width="1.5" stroke-dasharray="5,4"/>
+              <path d="M 300 88 Q 345 148 308 200" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-dasharray="5,4"/>
+              <path d="M 205 88 Q 175 168 308 200" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="1" stroke-dasharray="3,5"/>
+              <!-- Pin: EMEA -->
+              <circle cx="205" cy="88" r="9" fill="white" opacity="0.92"/>
+              <circle cx="205" cy="88" r="4.5" fill="#6E4FC4"/>
+              <text x="192" y="72" fill="white" font-size="9" font-family="IBM Plex Mono,monospace" text-anchor="middle" opacity="0.85">EMEA</text>
+              <!-- Pin: EU -->
+              <circle cx="300" cy="88" r="9" fill="white" opacity="0.92"/>
+              <circle cx="300" cy="88" r="4.5" fill="#8E6FDB"/>
+              <text x="314" y="72" fill="white" font-size="9" font-family="IBM Plex Mono,monospace" text-anchor="middle" opacity="0.85">EU</text>
+              <!-- Pin: S.America -->
+              <circle cx="308" cy="200" r="9" fill="white" opacity="0.92"/>
+              <circle cx="308" cy="200" r="4.5" fill="#C98BC9"/>
+              <text x="325" y="220" fill="white" font-size="9" font-family="IBM Plex Mono,monospace" text-anchor="middle" opacity="0.85">S. America</text>
+              <!-- 117% big stat -->
+              <text x="28" y="108" fill="white" font-size="54" font-family="Fraunces,Georgia,serif" font-weight="700" opacity="0.96">117%</text>
+              <rect x="28" y="118" width="118" height="2" fill="rgba(255,255,255,0.25)" rx="1"/>
+              <text x="28" y="138" fill="rgba(255,255,255,0.6)" font-size="9.5" font-family="IBM Plex Mono,monospace">of target achieved</text>
+              <text x="28" y="154" fill="rgba(255,255,255,0.45)" font-size="9.5" font-family="IBM Plex Mono,monospace">across 3 regions</text>
+              <!-- Loyalty badge -->
+              <circle cx="70" cy="210" r="30" fill="rgba(201,139,201,0.18)" stroke="rgba(201,139,201,0.38)" stroke-width="1"/>
+              <text x="70" y="204" text-anchor="middle" fill="#C98BC9" font-size="22">★</text>
+              <text x="70" y="222" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-size="8" font-family="IBM Plex Mono,monospace">Loyalty</text>
+              <!-- Sparkles -->
+              <text x="370" y="50" fill="rgba(255,255,255,0.35)" font-size="18">✦</text>
+              <text x="395" y="230" fill="rgba(201,139,201,0.5)" font-size="13">✦</text>
+              <text x="18" y="50" fill="rgba(255,255,255,0.25)" font-size="11">✦</text>
+              <text x="155" y="250" fill="rgba(255,255,255,0.18)" font-size="9">✦</text>
+            </svg>
+          </div>
         </a>
 
       </div>
@@ -89,7 +313,7 @@
     <div class="wrap">
       <div class="section-head">
         <span class="section-icon"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>
-        <h2>Projects Worked On</h2>
+        <h2>Projects I Worked On</h2>
       </div>
       <div class="project-grid">
 
@@ -148,7 +372,6 @@
           <span class="card-sub">Content QA &amp; Response Ops</span>
           <p class="card-hook">A live social campaign, a thousand inbound responses, and no room to pause and think.</p>
         </a>
-
 
       </div>
     </div>
@@ -217,7 +440,7 @@
         <div class="project-card">
           <span class="card-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg></span>
           <span class="case-tab">2023</span>
-          <h3>Spot Award for Best Project Lead</h3>
+          <h3>Spot Award for Best Project Performance</h3>
           <span class="card-sub">Deloitte Business Operations Services LLP</span>
           <p class="card-hook">A second Spot Award recognizing consistent excellence in project leadership and delivery.</p>
         </div>

@@ -87,8 +87,32 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 
 /* ---------- Hero ---------- */
 header.hero{
-  padding:88px 0 56px;
+  padding:72px 0 64px;
   border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(circle at 80% 50%, rgba(40,75,99,0.06), transparent 55%),
+    radial-gradient(circle at 10% 80%, rgba(60,110,113,0.06), transparent 45%),
+    var(--paper);
+}
+.hero-inner{
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:56px;
+  align-items:center;
+}
+.hero-text{ display:flex; flex-direction:column; }
+.hero-visual{
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:0 12px 48px rgba(40,75,99,0.12);
+  background:var(--lilac-deep);
+  aspect-ratio:4/3;
+}
+.hero-visual svg{ width:100%; height:100%; display:block; }
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr; gap:40px;}
+  .hero-visual{aspect-ratio:16/7; max-width:560px;}
 }
 .doc-tag{
   font-family:var(--mono);
@@ -102,8 +126,8 @@ h1.name{
   font-family:var(--serif);
   font-optical-sizing:auto;
   font-weight:600;
-  font-size:clamp(2.6rem, 6vw, 4.4rem);
-  line-height:1.02;
+  font-size:clamp(2rem, 4.5vw, 3.4rem);
+  line-height:1.06;
   margin:0 0 14px;
   letter-spacing:-0.01em;
   background:linear-gradient(100deg, var(--ink) 40%, var(--lilac-deep) 100%);
@@ -159,7 +183,7 @@ h1.name{
 
 /* ---------- Section shell ---------- */
 section{padding:64px 0;}
-section + section{border-top:1px solid var(--line);}
+section + section{border-top:none;}
 .section-head{
   display:flex;
   align-items:center;

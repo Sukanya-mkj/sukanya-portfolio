@@ -105,6 +105,49 @@
     .site-topnav-links { gap: 4px; }
     .site-topnav-links a { padding: 6px 11px; font-size: 12px; }
   }
+
+  /* ── Liberal palette use ── */
+  /* About: pale teal wash */
+  section.about { background: var(--paper-raised); }
+  /* Experience: white with left teal rule */
+  #experience { background: var(--paper); }
+  /* Awards: navy tint */
+  #awards { background: var(--paper-deep); }
+  /* Extracurricular: white */
+  #extracurricular { background: var(--paper); }
+  /* Credentials / Education: teal tint */
+  #credentials { background: var(--paper-raised); }
+  /* Contact footer: deep navy */
+  footer#contact {
+    background: var(--lilac-deep);
+    color: white;
+  }
+  footer#contact .section-head h2 { color: white; }
+  footer#contact p.lead { color: rgba(255,255,255,0.78); }
+  footer#contact .section-icon { background: rgba(255,255,255,0.12); color: white; }
+  footer#contact .contact-links a {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.20);
+    color: white;
+  }
+  footer#contact .contact-links a:hover {
+    background: rgba(255,255,255,0.16);
+    border-color: rgba(255,255,255,0.45);
+    color: white;
+  }
+  footer#contact .cv-button {
+    background: var(--lilac);
+    border-color: var(--lilac);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  }
+  footer#contact .fine-print { color: rgba(255,255,255,0.45); }
+  /* Nav active → teal instead of charcoal */
+  .site-topnav-links a.active {
+    color: white !important;
+    background: var(--lilac) !important;
+    border-color: var(--lilac) !important;
+    box-shadow: 0 2px 8px rgba(60,110,113,0.35) !important;
+  }
 </style>
 </head>
 <body>
@@ -155,15 +198,115 @@
 
   <header class="hero">
     <div class="wrap">
-      <p class="doc-tag">Portfolio</p>
-      <h1 class="name">Sukanya Mukherjee</h1>
-      <p class="tagline">Marketing Strategy &amp; Operations PMO | Building the Systems Behind Great Marketing</p>
-      <div class="meta-row">
-        <span><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Bengaluru, India</span>
-        <span><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:sukanyamukherjee17@gmail.com">sukanyamukherjee17@gmail.com</a></span>
-        <span><svg class="icon" viewBox="0 0 24 24"><rect x="4" y="3" width="4" height="18" rx="1"/><path d="M11 9h9M11 15h6"/><circle cx="6" cy="6" r="0.6"/></svg><a href="https://linkedin.com/in/sukanyamukherjee" target="_blank" rel="noopener">linkedin.com/in/sukanyamukherjee</a></span>
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="doc-tag">Portfolio</p>
+          <h1 class="name">Sukanya Mukherjee</h1>
+          <p class="tagline">Marketing Strategy &amp; Operations PMO | Building the Systems Behind Great Marketing</p>
+          <div class="meta-row">
+            <span><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Bengaluru, India</span>
+            <span><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:sukanyamukherjee17@gmail.com">sukanyamukherjee17@gmail.com</a></span>
+            <span><svg class="icon" viewBox="0 0 24 24"><rect x="4" y="3" width="4" height="18" rx="1"/><path d="M11 9h9M11 15h6"/><circle cx="6" cy="6" r="0.6"/></svg><a href="https://linkedin.com/in/sukanyamukherjee" target="_blank" rel="noopener">linkedin.com/in/sukanyamukherjee</a></span>
+          </div>
+          <a class="cv-button" href="mailto:sukanyamukherjee17@gmail.com?subject=CV%20Request%20from%20sukanya.site&body=Hi%20Sukanya%2C%0A%0AI%27d%20like%20to%20request%20a%20copy%20of%20your%20CV.%0A%0AMy%20name%3A%20%0AMy%20email%3A%20%0AReason%20for%20request%3A%20%0A%0AThanks!"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Request CV</a>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 420 315" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+            <defs>
+              <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1C3548"/>
+                <stop offset="100%" stop-color="#284B63"/>
+              </linearGradient>
+              <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#3C6E71"/>
+                <stop offset="100%" stop-color="#4A8A8D"/>
+              </linearGradient>
+              <filter id="heroGlow"><feGaussianBlur stdDeviation="10"/></filter>
+              <filter id="softBlur"><feGaussianBlur stdDeviation="5"/></filter>
+            </defs>
+
+            <!-- Background -->
+            <rect width="420" height="315" fill="url(#heroBg)"/>
+
+            <!-- Subtle glow pools -->
+            <circle cx="210" cy="157" r="100" fill="#3C6E71" opacity="0.10" filter="url(#heroGlow)"/>
+            <circle cx="380" cy="40" r="60" fill="#4A8A8D" opacity="0.12" filter="url(#heroGlow)"/>
+            <circle cx="40" cy="280" r="50" fill="#284B63" opacity="0.15" filter="url(#heroGlow)"/>
+
+            <!-- Dot grid background -->
+            <g fill="#D9D9D9" opacity="0.06">
+              <circle cx="30" cy="30" r="1.5"/><circle cx="70" cy="30" r="1.5"/><circle cx="110" cy="30" r="1.5"/><circle cx="150" cy="30" r="1.5"/><circle cx="190" cy="30" r="1.5"/><circle cx="230" cy="30" r="1.5"/><circle cx="270" cy="30" r="1.5"/><circle cx="310" cy="30" r="1.5"/><circle cx="350" cy="30" r="1.5"/><circle cx="390" cy="30" r="1.5"/>
+              <circle cx="30" cy="70" r="1.5"/><circle cx="70" cy="70" r="1.5"/><circle cx="110" cy="70" r="1.5"/><circle cx="150" cy="70" r="1.5"/><circle cx="190" cy="70" r="1.5"/><circle cx="230" cy="70" r="1.5"/><circle cx="270" cy="70" r="1.5"/><circle cx="310" cy="70" r="1.5"/><circle cx="350" cy="70" r="1.5"/><circle cx="390" cy="70" r="1.5"/>
+              <circle cx="30" cy="110" r="1.5"/><circle cx="70" cy="110" r="1.5"/><circle cx="110" cy="110" r="1.5"/><circle cx="150" cy="110" r="1.5"/><circle cx="190" cy="110" r="1.5"/><circle cx="230" cy="110" r="1.5"/><circle cx="270" cy="110" r="1.5"/><circle cx="310" cy="110" r="1.5"/><circle cx="350" cy="110" r="1.5"/><circle cx="390" cy="110" r="1.5"/>
+              <circle cx="30" cy="150" r="1.5"/><circle cx="70" cy="150" r="1.5"/><circle cx="150" cy="150" r="1.5"/><circle cx="270" cy="150" r="1.5"/><circle cx="310" cy="150" r="1.5"/><circle cx="350" cy="150" r="1.5"/><circle cx="390" cy="150" r="1.5"/>
+              <circle cx="30" cy="190" r="1.5"/><circle cx="70" cy="190" r="1.5"/><circle cx="110" cy="190" r="1.5"/><circle cx="150" cy="190" r="1.5"/><circle cx="190" cy="190" r="1.5"/><circle cx="230" cy="190" r="1.5"/><circle cx="270" cy="190" r="1.5"/><circle cx="310" cy="190" r="1.5"/><circle cx="350" cy="190" r="1.5"/><circle cx="390" cy="190" r="1.5"/>
+              <circle cx="30" cy="230" r="1.5"/><circle cx="70" cy="230" r="1.5"/><circle cx="110" cy="230" r="1.5"/><circle cx="150" cy="230" r="1.5"/><circle cx="190" cy="230" r="1.5"/><circle cx="230" cy="230" r="1.5"/><circle cx="270" cy="230" r="1.5"/><circle cx="310" cy="230" r="1.5"/><circle cx="350" cy="230" r="1.5"/><circle cx="390" cy="230" r="1.5"/>
+              <circle cx="30" cy="270" r="1.5"/><circle cx="70" cy="270" r="1.5"/><circle cx="110" cy="270" r="1.5"/><circle cx="150" cy="270" r="1.5"/><circle cx="190" cy="270" r="1.5"/><circle cx="230" cy="270" r="1.5"/><circle cx="270" cy="270" r="1.5"/><circle cx="310" cy="270" r="1.5"/><circle cx="350" cy="270" r="1.5"/><circle cx="390" cy="270" r="1.5"/>
+            </g>
+
+            <!-- Connection lines (draw before nodes) -->
+            <!-- Hub to GTM -->
+            <line x1="210" y1="157" x2="116" y2="82" stroke="#3C6E71" stroke-width="1.5" opacity="0.55"/>
+            <!-- Hub to Campaign -->
+            <line x1="210" y1="157" x2="320" y2="82" stroke="#3C6E71" stroke-width="1.5" opacity="0.55"/>
+            <!-- Hub to Data -->
+            <line x1="210" y1="157" x2="356" y2="172" stroke="#4A8A8D" stroke-width="1.5" opacity="0.45"/>
+            <!-- Hub to Teams -->
+            <line x1="210" y1="157" x2="64" y2="172" stroke="#4A8A8D" stroke-width="1.5" opacity="0.45"/>
+            <!-- Hub to AI -->
+            <line x1="210" y1="157" x2="148" y2="254" stroke="#D9D9D9" stroke-width="1" stroke-dasharray="4,3" opacity="0.35"/>
+            <!-- Hub to Process -->
+            <line x1="210" y1="157" x2="280" y2="250" stroke="#D9D9D9" stroke-width="1" stroke-dasharray="4,3" opacity="0.35"/>
+
+            <!-- Orbit ring -->
+            <circle cx="210" cy="157" r="78" fill="none" stroke="#3C6E71" stroke-width="1" stroke-dasharray="6,5" opacity="0.22"/>
+
+            <!-- Outer nodes -->
+            <!-- GTM -->
+            <circle cx="116" cy="82" r="28" fill="rgba(60,110,113,0.18)" stroke="#3C6E71" stroke-width="1.5"/>
+            <text x="116" y="78" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="white" font-weight="500">GTM</text>
+            <text x="116" y="92" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="rgba(255,255,255,0.65)">Strategy</text>
+
+            <!-- Campaign -->
+            <circle cx="320" cy="82" r="28" fill="rgba(60,110,113,0.18)" stroke="#3C6E71" stroke-width="1.5"/>
+            <text x="320" y="78" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="white" font-weight="500">Campaign</text>
+            <text x="320" y="92" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="rgba(255,255,255,0.65)">Ops</text>
+
+            <!-- Data -->
+            <circle cx="356" cy="172" r="24" fill="rgba(74,138,141,0.16)" stroke="#4A8A8D" stroke-width="1.5"/>
+            <text x="356" y="168" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="white" font-weight="500">Data</text>
+            <text x="356" y="181" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="rgba(255,255,255,0.65)">Analytics</text>
+
+            <!-- Teams -->
+            <circle cx="64" cy="172" r="24" fill="rgba(74,138,141,0.16)" stroke="#4A8A8D" stroke-width="1.5"/>
+            <text x="64" y="168" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="white" font-weight="500">Teams</text>
+            <text x="64" y="181" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="rgba(255,255,255,0.65)">&amp; Stakeholders</text>
+
+            <!-- AI Ops -->
+            <circle cx="148" cy="254" r="22" fill="rgba(40,75,99,0.40)" stroke="rgba(217,217,217,0.35)" stroke-width="1"/>
+            <text x="148" y="250" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="rgba(255,255,255,0.85)" font-weight="500">AI</text>
+            <text x="148" y="263" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="rgba(255,255,255,0.55)">Ops</text>
+
+            <!-- Process -->
+            <circle cx="280" cy="250" r="22" fill="rgba(40,75,99,0.40)" stroke="rgba(217,217,217,0.35)" stroke-width="1"/>
+            <text x="280" y="246" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" fill="rgba(255,255,255,0.85)" font-weight="500">Process</text>
+            <text x="280" y="259" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8" fill="rgba(255,255,255,0.55)">&amp; PMO</text>
+
+            <!-- Central hub -->
+            <circle cx="210" cy="157" r="44" fill="url(#hubGrad)" opacity="0.95"/>
+            <circle cx="210" cy="157" r="44" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5"/>
+            <!-- Person icon in hub -->
+            <circle cx="210" cy="148" r="10" fill="white" opacity="0.92"/>
+            <path d="M192 174 Q210 162 228 174" fill="white" opacity="0.75"/>
+            <text x="210" y="192" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="8.5" fill="rgba(255,255,255,0.80)" font-weight="500">PMO</text>
+
+            <!-- Sparkle accents -->
+            <text x="380" y="290" font-size="16" fill="rgba(74,138,141,0.50)">✦</text>
+            <text x="18" y="55" font-size="10" fill="rgba(60,110,113,0.45)">✦</text>
+            <text x="392" y="130" font-size="9" fill="rgba(217,217,217,0.30)">✦</text>
+          </svg>
+        </div>
       </div>
-      <a class="cv-button" href="mailto:sukanyamukherjee17@gmail.com?subject=CV%20Request%20from%20sukanya.site&body=Hi%20Sukanya%2C%0A%0AI%27d%20like%20to%20request%20a%20copy%20of%20your%20CV.%0A%0AMy%20name%3A%20%0AMy%20email%3A%20%0AReason%20for%20request%3A%20%0A%0AThanks!"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Request CV</a>
     </div>
   </header>
 
@@ -345,9 +488,9 @@
       font-size: 11px;
       letter-spacing: 0.11em;
       text-transform: uppercase;
-      color: var(--lilac);
-      background: rgba(60,110,113,0.14);
-      border: 1px solid rgba(60,110,113,0.3);
+      color: #FFFFFF;
+      background: rgba(60,110,113,0.40);
+      border: 1px solid rgba(74,138,141,0.65);
       border-radius: 20px;
       padding: 4px 12px;
       margin-bottom: 16px;
@@ -359,12 +502,12 @@
       font-size: clamp(1.2rem, 2.5vw, 1.6rem);
       line-height: 1.15;
       margin: 0 0 12px;
-      color: white;
+      color: #FFFFFF;
       letter-spacing: -0.01em;
     }
     .featured-card p {
       font-size: 0.95rem;
-      color: rgba(255,255,255,0.55);
+      color: rgba(255,255,255,0.82);
       margin: 0 0 22px;
       line-height: 1.7;
       max-width: 400px;
@@ -375,9 +518,10 @@
       gap: 8px;
       font-family: var(--mono);
       font-size: 12.5px;
-      color: var(--lilac);
+      color: #D9D9D9;
       transition: gap 0.2s ease;
     }
+    .featured-card:hover .featured-cta { color: #FFFFFF; }
     .featured-card:hover .featured-cta { gap: 14px; }
     .featured-cta svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
     .featured-card-visual {
@@ -469,22 +613,22 @@
               <circle cx="323" cy="126" r="4" fill="white" opacity="0.75"/>
               <!-- AI Node -->
               <circle cx="292" cy="52" r="26" fill="rgba(60,110,113,0.12)" stroke="#3C6E71" stroke-width="1"/>
-              <text x="292" y="46" text-anchor="middle" fill="#3C6E71" font-size="11" font-family="JetBrains Mono,monospace" font-weight="500">AI</text>
+              <text x="292" y="46" text-anchor="middle" fill="#FFFFFF" font-size="11" font-family="JetBrains Mono,monospace" font-weight="500">AI</text>
               <text x="292" y="61" text-anchor="middle" fill="rgba(255,255,255,0.65)" font-size="9" font-family="JetBrains Mono,monospace">Ops</text>
               <!-- Labels -->
-              <text x="63" y="174" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8.5" font-family="JetBrains Mono,monospace">GTM Brief</text>
-              <text x="195" y="174" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8.5" font-family="JetBrains Mono,monospace">Team Align</text>
-              <text x="323" y="174" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8.5" font-family="JetBrains Mono,monospace">Launch</text>
+              <text x="63" y="174" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="8.5" font-family="JetBrains Mono,monospace">GTM Brief</text>
+              <text x="195" y="174" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="8.5" font-family="JetBrains Mono,monospace">Team Align</text>
+              <text x="323" y="174" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="8.5" font-family="JetBrains Mono,monospace">Launch</text>
               <!-- Stat pills -->
               <rect x="28" y="192" width="102" height="40" rx="9" fill="rgba(40,75,99,0.22)" stroke="rgba(60,110,113,0.28)" stroke-width="1"/>
-              <text x="79" y="207" text-anchor="middle" fill="#3C6E71" font-size="14" font-family="Fraunces,Georgia,serif" font-weight="600">−40%</text>
-              <text x="79" y="223" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8" font-family="JetBrains Mono,monospace">doc turnaround</text>
+              <text x="79" y="207" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Fraunces,Georgia,serif" font-weight="600">−40%</text>
+              <text x="79" y="223" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="8" font-family="JetBrains Mono,monospace">doc turnaround</text>
               <rect x="144" y="192" width="102" height="40" rx="9" fill="rgba(60,110,113,0.14)" stroke="rgba(60,110,113,0.28)" stroke-width="1"/>
-              <text x="195" y="207" text-anchor="middle" fill="#3C6E71" font-size="14" font-family="Fraunces,Georgia,serif" font-weight="600">5+ hrs</text>
-              <text x="195" y="223" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8" font-family="JetBrains Mono,monospace">reclaimed/week</text>
+              <text x="195" y="207" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Fraunces,Georgia,serif" font-weight="600">5+ hrs</text>
+              <text x="195" y="223" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="8" font-family="JetBrains Mono,monospace">reclaimed/week</text>
               <rect x="260" y="192" width="102" height="40" rx="9" fill="rgba(40,75,99,0.22)" stroke="rgba(60,110,113,0.28)" stroke-width="1"/>
-              <text x="311" y="207" text-anchor="middle" fill="#3C6E71" font-size="14" font-family="Fraunces,Georgia,serif" font-weight="600">100%</text>
-              <text x="311" y="223" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="8" font-family="JetBrains Mono,monospace">on schedule</text>
+              <text x="311" y="207" text-anchor="middle" fill="#FFFFFF" font-size="14" font-family="Fraunces,Georgia,serif" font-weight="600">100%</text>
+              <text x="311" y="223" text-anchor="middle" fill="rgba(255,255,255,0.78)" font-size="8" font-family="JetBrains Mono,monospace">on schedule</text>
               <!-- Sparkles -->
               <text x="270" y="36" fill="#3C6E71" font-size="14" opacity="0.45">✦</text>
               <text x="390" y="190" fill="#3C6E71" font-size="18" opacity="0.3">✦</text>
@@ -496,10 +640,10 @@
         <!-- Card 2: Travel + Loyalty (warm gradient) -->
         <a class="featured-card" href="projects/global-travel-campaign-launch.html" style="border-color:rgba(60,110,113,0.2);">
           <div class="featured-card-body">
-            <span class="featured-tag" style="color:var(--rose);background:rgba(74,138,141,0.14);border-color:rgba(74,138,141,0.3);">Travel &amp; Hospitality</span>
+            <span class="featured-tag" style="color:#FFFFFF;background:rgba(74,138,141,0.40);border-color:rgba(74,138,141,0.65);">Travel &amp; Hospitality</span>
             <h3>Global Campaign and Loyalty Programme Across Three Markets</h3>
             <p>Three regions, one campaign framework, a loyalty programme layered in mid-campaign, and a final result of 117% of target across EMEA, Europe, and South America.</p>
-            <span class="featured-cta" style="color:var(--rose);">Read case study <svg viewBox="0 0 24 24" style="stroke:var(--rose)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            <span class="featured-cta">Read case study <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
           <div class="featured-card-visual" style="background:#2A5C60;">
             <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
@@ -694,13 +838,6 @@
           <h3>Spot Award for Best Project Performance</h3>
           <span class="card-sub">Deloitte Business Operations Services LLP</span>
           <p class="card-hook">A second Spot Award recognizing consistent excellence in project leadership and delivery.</p>
-        </div>
-        <div class="project-card">
-          <span class="card-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg></span>
-          <span class="case-tab">Retail</span>
-          <h3>Spot Award for Delivery Process Innovation</h3>
-          <span class="card-sub">Inkwood Research</span>
-          <p class="card-hook">Recognized for rebuilding the campaign delivery process that cut turnaround time by 20 percent while raising the client's perception of quality.</p>
         </div>
       </div>
     </div>

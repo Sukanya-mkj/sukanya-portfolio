@@ -221,11 +221,12 @@ h1.name{
   transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
   cursor:default;
 }
-.meta-row span:hover{
+.meta-row span:not(.no-hover):hover{
   background: rgba(60,110,113,0.12);
   color: rgba(255,255,255,0.90);
   transform: translateY(-2px);
 }
+.meta-row span.no-hover{ cursor:default; }
 .meta-row span:last-child{border-right:none;}
 .meta-row a{
   color:rgba(255,255,255,0.70);

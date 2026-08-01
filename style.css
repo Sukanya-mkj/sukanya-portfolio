@@ -87,26 +87,47 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 
 /* ---------- Hero ---------- */
 header.hero{
-  padding:0 0 0;
+  padding:0;
   border-bottom:1px solid var(--line);
+  display:flex;
+  flex-direction:column;
   background:
     radial-gradient(circle at 80% 50%, rgba(40,75,99,0.06), transparent 55%),
     radial-gradient(circle at 10% 80%, rgba(60,110,113,0.06), transparent 45%),
     var(--paper);
 }
 header.hero .wrap{
-  padding-top:52px;
-  padding-bottom:52px;
+  padding-top:56px;
+  padding-bottom:60px;
 }
 .hero-banner{
   width:100%;
-  overflow:hidden;
-  line-height:0;
+  background:linear-gradient(90deg,#1C3548 0%,#284B63 50%,#1C3548 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:28px;
+  padding:26px 48px;
+  flex-shrink:0;
 }
-.hero-banner-svg{
-  width:100%;
-  height:auto;
+.hero-banner-text{
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:500;
+  font-size:clamp(16px,2.2vw,26px);
+  color:#FFFFFF;
+  text-align:center;
+  white-space:nowrap;
+}
+.hero-banner-deco{
   display:block;
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(60,110,113,0.7));
+  max-width:120px;
+}
+.hero-banner-deco:last-child{
+  background:linear-gradient(90deg,rgba(60,110,113,0.7),transparent);
 }
 .doc-tag{
   font-family:var(--mono);

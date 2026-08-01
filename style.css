@@ -121,6 +121,7 @@ header.hero .hero-left{
   flex:1;
   overflow:hidden;
   min-height:180px;
+  padding:28px 28px 0 28px;
 }
 .hero-photo img{
   width:100%;
@@ -128,6 +129,7 @@ header.hero .hero-left{
   object-fit:cover;
   object-position:top center;
   display:block;
+  border-radius:12px 12px 0 0;
 }
 .hero-statement-bar{
   flex-shrink:0;
@@ -144,7 +146,7 @@ header.hero h1.name{
   color:#FFFFFF;
 }
 header.hero .tagline{ color:rgba(255,255,255,0.62); }
-header.hero .meta-row{ font-size:13px; color:rgba(255,255,255,0.48); }
+header.hero .meta-row{ font-size:15px; color:rgba(255,255,255,0.48); }
 header.hero .meta-row a{ color:rgba(255,255,255,0.70); text-decoration-color:#3C6E71; }
 header.hero .meta-row span{ border-right-color:rgba(255,255,255,0.12); }
 /* Right column — brand statement */

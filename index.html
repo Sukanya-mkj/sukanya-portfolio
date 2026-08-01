@@ -130,16 +130,16 @@
     .featured-card:hover .featured-cta { gap: 14px; }
     .featured-cta svg { width: 15px; height: 15px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
     .featured-card-visual {
-      width: 420px;
-      flex-shrink: 0;
+      flex: 0 0 42%;
       overflow: hidden;
       display: flex;
-      align-items: stretch;
+      align-items: center;
+      justify-content: center;
     }
     .featured-card-visual svg { width: 100%; height: 100%; display: block; }
     @media (max-width: 860px) {
       .featured-card { flex-direction: column; }
-      .featured-card-visual { width: 100%; height: 220px; }
+      .featured-card-visual { flex: none; width: 100%; height: 220px; }
       .featured-card-body { padding: 32px 28px; }
     }
   </style>
@@ -161,12 +161,12 @@
         <a class="featured-card" href="projects/gtm-workflow-enterprise-launch.html">
           <div class="featured-card-body">
             <span class="featured-tag">GTM &amp; Operations</span>
-            <h3>Enterprise Product Launch &amp; AI-Augmented GTM Workflow</h3>
+            <h3>Enterprise Product Launch and AI-Augmented GTM Workflow</h3>
             <p>A product ready to ship with no go-to-market behind it. Four teams, one GTM brief, and an AI-augmented workflow that cut documentation time by 40% and became the team's new standard.</p>
             <span class="featured-cta">Read case study <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
-          <div class="featured-card-visual">
-            <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+          <div class="featured-card-visual" style="background:#1A1035;">
+            <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
               <defs>
                 <linearGradient id="gtmBg" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stop-color="#1A1035"/>
@@ -246,12 +246,12 @@
         <a class="featured-card" href="projects/global-travel-campaign-launch.html" style="border-color:rgba(201,139,201,0.2);">
           <div class="featured-card-body">
             <span class="featured-tag" style="color:var(--rose);background:rgba(201,139,201,0.12);border-color:rgba(201,139,201,0.28);">Travel &amp; Hospitality</span>
-            <h3>Global Campaign &amp; Loyalty Programme Across Three Markets</h3>
-            <p>Three regions, one campaign framework, a loyalty programme layered in mid-campaign — and a final result of 117% of target across EMEA, Europe, and South America.</p>
+            <h3>Global Campaign and Loyalty Programme Across Three Markets</h3>
+            <p>Three regions, one campaign framework, a loyalty programme layered in mid-campaign, and a final result of 117% of target across EMEA, Europe, and South America.</p>
             <span class="featured-cta" style="color:var(--rose);">Read case study <svg viewBox="0 0 24 24" style="stroke:var(--rose)"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
           </div>
-          <div class="featured-card-visual">
-            <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">
+          <div class="featured-card-visual" style="background:#3D2070;">
+            <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
               <defs>
                 <linearGradient id="travelBg" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stop-color="#3D2070"/>

@@ -314,6 +314,9 @@ h2{
   box-shadow:0 16px 32px rgba(40,75,99,0.15);
 }
 .project-card:hover::before{transform:scaleX(1);}
+.project-card.no-link{cursor:default;}
+.project-card.no-link:hover{transform:none;border-color:var(--line);box-shadow:0 2px 8px rgba(40,75,99,0.06);}
+.project-card.no-link:hover::before{transform:scaleX(0);}
 .project-card .card-icon{
   width:34px;
   height:34px;

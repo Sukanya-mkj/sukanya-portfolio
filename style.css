@@ -92,8 +92,8 @@ header.hero{
   background:linear-gradient(135deg,#1C3548 0%,#284B63 60%,#1C3548 100%);
 }
 header.hero .wrap{
-  padding-top:64px;
-  padding-bottom:64px;
+  padding-top:52px;
+  padding-bottom:52px;
 }
 .hero-inner{
   display:grid;
@@ -243,7 +243,7 @@ h1.name{
 }
 
 /* ---------- Section shell ---------- */
-section{padding:64px 0;}
+section{padding:44px 0;}
 section + section{border-top:none;}
 .section-head{
   display:flex;
@@ -605,7 +605,7 @@ h2{
 }
 
 /* ---------- Contact / footer ---------- */
-footer{padding:64px 0 80px;}
+footer{padding:48px 0 60px;}
 footer p.lead{
   max-width:480px;
   color:var(--ink-soft);

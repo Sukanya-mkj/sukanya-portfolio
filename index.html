@@ -36,8 +36,8 @@
     position: sticky;
     top: 0;
     z-index: 200;
-    background: var(--paper);
-    box-shadow: 0 1px 0 var(--line), 0 4px 20px rgba(53,53,53,0.06);
+    background: #E8EEF2;
+    box-shadow: 0 1px 0 var(--line), 0 4px 20px rgba(53,53,53,0.08);
     padding: 0 28px;
   }
   .site-topnav-inner {
@@ -78,7 +78,7 @@
   .site-topnav-links a {
     display: block;
     font-family: var(--sans);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: var(--ink-soft);
     text-decoration: none;
@@ -103,7 +103,7 @@
   @media (max-width: 640px) {
     .site-topnav-brand { display: none; }
     .site-topnav-links { gap: 4px; }
-    .site-topnav-links a { padding: 6px 11px; font-size: 12px; }
+    .site-topnav-links a { padding: 6px 11px; font-size: 13px; }
   }
 
   /* ── Liberal palette use ── */
@@ -232,6 +232,24 @@
   }
   footer#contact .fine-print { color: rgba(255,255,255,0.45); }
   /* Nav active → teal instead of charcoal */
+  
+  /* Hero right stats row */
+  .hero-stat-row {
+    display: flex; gap: 28px; margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid rgba(60,110,113,0.25);
+  }
+  .hero-stat-item strong {
+    display: block; font-family: var(--sans);
+    font-size: 24px; font-weight: 700; color: #FFFFFF;
+    line-height: 1; margin-bottom: 4px;
+  }
+  .hero-stat-item span {
+    font-family: var(--sans); font-size: 10px;
+    color: rgba(255,255,255,0.42); text-transform: uppercase;
+    letter-spacing: 0.09em;
+  }
+
   .site-topnav-links a.active {
     color: white !important;
     background: var(--lilac) !important;
@@ -307,6 +325,11 @@
             <span class="hero-deco-dot"></span>
             <span class="hero-deco-line" style="width:24px;opacity:0.35;"></span>
           </div>
+          <div class="hero-stat-row">
+            <div class="hero-stat-item"><strong>6+</strong><span>Years</span></div>
+            <div class="hero-stat-item"><strong>10+</strong><span>Programmes</span></div>
+            <div class="hero-stat-item"><strong>F500</strong><span>Clients</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -325,109 +348,75 @@
           <p>I am passionate about continuous improvement, operational excellence, and exploring how AI can help teams work smarter and focus on higher value work. The projects below are less about the tools I used and more about the moments where structure had to be built from scratch, often under pressure, and always with people on the other end of the outcome.</p>
         </div>
         <div class="about-card">
-          <svg viewBox="0 0 320 458" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="320" height="458">
-            <defs>
-              <linearGradient id="illustBg" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#E2EDF2"/>
-                <stop offset="100%" stop-color="#EBF4F4"/>
-              </linearGradient>
-              <linearGradient id="centerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#284B63"/>
-                <stop offset="100%" stop-color="#3C6E71"/>
-              </linearGradient>
-              <filter id="softglow"><feGaussianBlur stdDeviation="8"/></filter>
-            </defs>
-
-            <!-- Illustration background -->
-            <rect width="320" height="200" fill="url(#illustBg)"/>
-
-            <!-- Glow behind centre circle -->
-            <circle cx="160" cy="96" r="55" fill="#3C6E71" opacity="0.12" filter="url(#softglow)"/>
-
+          <svg viewBox="0 0 320 444" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:auto;display:block;">
+            <!-- Background -->
+            <rect width="320" height="444" fill="#0F2233"/>
+            <!-- Subtle grid -->
+            <line x1="0" y1="110" x2="320" y2="110" stroke="rgba(60,110,113,0.10)" stroke-width="1"/>
+            <line x1="0" y1="220" x2="320" y2="220" stroke="rgba(60,110,113,0.10)" stroke-width="1"/>
+            <line x1="0" y1="330" x2="320" y2="330" stroke="rgba(60,110,113,0.10)" stroke-width="1"/>
+            <line x1="160" y1="0" x2="160" y2="444" stroke="rgba(60,110,113,0.07)" stroke-width="1"/>
+            <!-- Top accent bar -->
+            <rect x="0" y="0" width="320" height="3" fill="#3C6E71"/>
             <!-- Orbit ring -->
-            <circle cx="160" cy="96" r="66" fill="none" stroke="#3C6E71" stroke-width="1" stroke-dasharray="5,4" opacity="0.35"/>
-
-            <!-- Centre circle -->
-            <circle cx="160" cy="96" r="40" fill="url(#centerGrad)"/>
-            <!-- Abstract person in centre -->
-            <circle cx="160" cy="86" r="11" fill="white" opacity="0.9"/>
-            <path d="M138 118 Q160 106 182 118" fill="white" opacity="0.75"/>
-
-            <!-- Orbiting nodes -->
-            <!-- PMO - top left -->
-            <circle cx="102" cy="46" r="18" fill="white" stroke="#D9D9D9" stroke-width="1.5"/>
-            <text x="102" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#284B63" font-weight="500">PMO</text>
-            <line x1="117" y1="60" x2="126" y2="70" stroke="#3C6E71" stroke-width="1" opacity="0.4"/>
-
-            <!-- GTM - top right -->
-            <circle cx="218" cy="46" r="18" fill="white" stroke="#D9D9D9" stroke-width="1.5"/>
-            <text x="218" y="50" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#284B63" font-weight="500">GTM</text>
-            <line x1="203" y1="60" x2="194" y2="70" stroke="#3C6E71" stroke-width="1" opacity="0.4"/>
-
-            <!-- AI - right -->
-            <circle cx="240" cy="110" r="18" fill="white" stroke="#D9D9D9" stroke-width="1.5"/>
-            <text x="240" y="114" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#3C6E71" font-weight="500">AI</text>
-            <line x1="222" y1="106" x2="200" y2="102" stroke="#3C6E71" stroke-width="1" opacity="0.4"/>
-
-            <!-- Ops - left -->
-            <circle cx="80" cy="110" r="18" fill="white" stroke="#D9D9D9" stroke-width="1.5"/>
-            <text x="80" y="114" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9" fill="#3C6E71" font-weight="500">Ops</text>
-            <line x1="98" y1="106" x2="120" y2="102" stroke="#3C6E71" stroke-width="1" opacity="0.4"/>
-
-            <!-- Sparkles -->
-            <text x="268" y="40" font-size="14" fill="#3C6E71" opacity="0.55">✦</text>
-            <text x="44" y="38" font-size="10" fill="#3C6E71" opacity="0.5">✦</text>
-            <text x="280" y="160" font-size="8" fill="#3C6E71" opacity="0.4">✦</text>
-            <text x="30" y="168" font-size="9" fill="#3C6E71" opacity="0.35">✦</text>
-
-            <!-- Stats area background (soft, no harsh divider) -->
-            <rect x="0" y="200" width="320" height="258" fill="#EBF4F4"/>
-
-            <!-- Stat 1: Years -->
-            <text x="36" y="256" font-family="Fraunces,Georgia,serif" font-size="48" font-weight="700" fill="#284B63">6+</text>
-            <text x="36" y="276" font-family="DM Sans,sans-serif" font-size="12" fill="#5C7A7D">Years of experience</text>
-
-            <!-- Stat 2: Industries -->
-            <text x="178" y="256" font-family="Fraunces,Georgia,serif" font-size="48" font-weight="700" fill="#284B63">7+</text>
-            <text x="178" y="276" font-family="DM Sans,sans-serif" font-size="12" fill="#5C7A7D">Industries served</text>
-
-            <!-- Mid divider -->
-            <rect x="24" y="292" width="272" height="1" fill="#E6F2F2"/>
-
-            <!-- Stat 3: Programs -->
-            <text x="36" y="346" font-family="Fraunces,Georgia,serif" font-size="48" font-weight="700" fill="#3C6E71">10+</text>
-            <text x="36" y="366" font-family="DM Sans,sans-serif" font-size="12" fill="#5C7A7D">Programs managed</text>
-
-            <!-- Stat 4: Awards -->
-            <text x="210" y="346" font-family="Fraunces,Georgia,serif" font-size="48" font-weight="700" fill="#4A8A8D">3</text>
-            <text x="196" y="366" font-family="DM Sans,sans-serif" font-size="12" fill="#5C7A7D">Awards won</text>
-
-            <!-- Bottom divider -->
-            <rect x="24" y="382" width="272" height="1" fill="#E6F2F2"/>
-
+            <circle cx="160" cy="66" r="46" fill="none" stroke="rgba(60,110,113,0.30)" stroke-width="1" stroke-dasharray="4,3"/>
+            <!-- Glow -->
+            <circle cx="160" cy="66" r="36" fill="rgba(60,110,113,0.14)"/>
+            <!-- Monogram circle -->
+            <circle cx="160" cy="66" r="30" fill="rgba(60,110,113,0.28)" stroke="#3C6E71" stroke-width="1.5"/>
+            <text x="160" y="73" text-anchor="middle" fill="#FFFFFF" font-size="20" font-family="Sora,sans-serif" font-weight="700" letter-spacing="2">SM</text>
+            <!-- Orbit nodes -->
+            <circle cx="160" cy="18" r="12" fill="#162B3A" stroke="rgba(60,110,113,0.55)" stroke-width="1"/>
+            <text x="160" y="22" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5" font-family="Sora,sans-serif" font-weight="600">PMO</text>
+            <circle cx="208" cy="80" r="12" fill="#162B3A" stroke="rgba(60,110,113,0.55)" stroke-width="1"/>
+            <text x="208" y="84" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5" font-family="Sora,sans-serif" font-weight="600">GTM</text>
+            <circle cx="112" cy="80" r="12" fill="#162B3A" stroke="rgba(60,110,113,0.55)" stroke-width="1"/>
+            <text x="112" y="84" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5" font-family="Sora,sans-serif" font-weight="600">AI</text>
+            <circle cx="160" cy="114" r="12" fill="#162B3A" stroke="rgba(60,110,113,0.55)" stroke-width="1"/>
+            <text x="160" y="118" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5" font-family="Sora,sans-serif" font-weight="600">Ops</text>
+            <!-- Role label -->
+            <text x="160" y="146" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="11" font-family="Sora,sans-serif" font-weight="600">Marketing Operations PMO</text>
+            <text x="160" y="162" text-anchor="middle" fill="rgba(60,110,113,0.85)" font-size="9.5" font-family="Sora,sans-serif">Bengaluru · 6+ years</text>
+            <!-- Divider -->
+            <line x1="40" y1="178" x2="280" y2="178" stroke="rgba(60,110,113,0.22)" stroke-width="1"/>
+            <!-- Stats 2x2 grid -->
+            <text x="80" y="222" text-anchor="middle" fill="#FFFFFF" font-size="38" font-family="Sora,sans-serif" font-weight="700">6+</text>
+            <text x="80" y="240" text-anchor="middle" fill="rgba(255,255,255,0.50)" font-size="9" font-family="Sora,sans-serif">years experience</text>
+            <line x1="160" y1="185" x2="160" y2="310" stroke="rgba(60,110,113,0.18)" stroke-width="1"/>
+            <text x="240" y="222" text-anchor="middle" fill="#FFFFFF" font-size="38" font-family="Sora,sans-serif" font-weight="700">10+</text>
+            <text x="240" y="240" text-anchor="middle" fill="rgba(255,255,255,0.50)" font-size="9" font-family="Sora,sans-serif">programmes managed</text>
+            <line x1="40" y1="258" x2="280" y2="258" stroke="rgba(60,110,113,0.15)" stroke-width="1"/>
+            <text x="80" y="296" text-anchor="middle" fill="#3C6E71" font-size="38" font-family="Sora,sans-serif" font-weight="700">7+</text>
+            <text x="80" y="314" text-anchor="middle" fill="rgba(255,255,255,0.50)" font-size="9" font-family="Sora,sans-serif">industries served</text>
+            <text x="240" y="296" text-anchor="middle" fill="#3C6E71" font-size="38" font-family="Sora,sans-serif" font-weight="700">3</text>
+            <text x="240" y="314" text-anchor="middle" fill="rgba(255,255,255,0.50)" font-size="9" font-family="Sora,sans-serif">Deloitte awards</text>
+            <!-- Divider -->
+            <line x1="40" y1="330" x2="280" y2="330" stroke="rgba(60,110,113,0.22)" stroke-width="1"/>
             <!-- Skill tags row 1 -->
-            <rect x="24" y="396" width="48" height="22" rx="11" fill="#E6F2F2"/>
-            <text x="48" y="411" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#284B63">PMO</text>
-
-            <rect x="78" y="396" width="48" height="22" rx="11" fill="#E6F2F2"/>
-            <text x="102" y="411" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#284B63">GTM</text>
-
-            <rect x="132" y="396" width="58" height="22" rx="11" fill="#E6F2F2"/>
-            <text x="161" y="411" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#284B63">AI Ops</text>
-
-            <rect x="196" y="396" width="46" height="22" rx="11" fill="#E6F2F2"/>
-            <text x="219" y="411" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#3C6E71">BRD</text>
-
-            <rect x="248" y="396" width="48" height="22" rx="11" fill="#E6F2F2"/>
-            <text x="272" y="411" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#3C6E71">F500</text>
-
+            <rect x="22" y="344" width="52" height="22" rx="11" fill="rgba(60,110,113,0.18)" stroke="rgba(60,110,113,0.42)" stroke-width="1"/>
+            <text x="48" y="359" text-anchor="middle" fill="rgba(255,255,255,0.80)" font-size="9" font-family="Sora,sans-serif" font-weight="500">PMO</text>
+            <rect x="82" y="344" width="52" height="22" rx="11" fill="rgba(60,110,113,0.18)" stroke="rgba(60,110,113,0.42)" stroke-width="1"/>
+            <text x="108" y="359" text-anchor="middle" fill="rgba(255,255,255,0.80)" font-size="9" font-family="Sora,sans-serif" font-weight="500">GTM</text>
+            <rect x="142" y="344" width="60" height="22" rx="11" fill="rgba(60,110,113,0.18)" stroke="rgba(60,110,113,0.42)" stroke-width="1"/>
+            <text x="172" y="359" text-anchor="middle" fill="rgba(255,255,255,0.80)" font-size="9" font-family="Sora,sans-serif" font-weight="500">AI Ops</text>
+            <rect x="210" y="344" width="44" height="22" rx="11" fill="rgba(60,110,113,0.18)" stroke="rgba(60,110,113,0.42)" stroke-width="1"/>
+            <text x="232" y="359" text-anchor="middle" fill="rgba(255,255,255,0.80)" font-size="9" font-family="Sora,sans-serif" font-weight="500">BRD</text>
+            <rect x="262" y="344" width="36" height="22" rx="11" fill="rgba(60,110,113,0.18)" stroke="rgba(60,110,113,0.42)" stroke-width="1"/>
+            <text x="280" y="359" text-anchor="middle" fill="rgba(255,255,255,0.80)" font-size="9" font-family="Sora,sans-serif" font-weight="500">F500</text>
             <!-- Skill tags row 2 -->
-            <rect x="24" y="424" width="118" height="22" rx="11" fill="#E6F2F2"/>
-            <text x="83" y="439" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#284B63">Marketing Strategy</text>
-
-            <rect x="148" y="424" width="148" height="22" rx="11" fill="#E6F2F2"/>
-            <text x="222" y="439" text-anchor="middle" font-family="DM Sans,sans-serif" font-size="9.5" fill="#3C6E71">Stakeholder Management</text>
-
+            <rect x="22" y="374" width="130" height="22" rx="11" fill="rgba(60,110,113,0.18)" stroke="rgba(60,110,113,0.42)" stroke-width="1"/>
+            <text x="87" y="389" text-anchor="middle" fill="rgba(255,255,255,0.80)" font-size="9" font-family="Sora,sans-serif" font-weight="500">Marketing Strategy</text>
+            <rect x="160" y="374" width="136" height="22" rx="11" fill="rgba(60,110,113,0.18)" stroke="rgba(60,110,113,0.42)" stroke-width="1"/>
+            <text x="228" y="389" text-anchor="middle" fill="rgba(255,255,255,0.80)" font-size="9" font-family="Sora,sans-serif" font-weight="500">Stakeholder Mgt</text>
+            <!-- Tags row 3 -->
+            <rect x="22" y="404" width="90" height="22" rx="11" fill="rgba(60,110,113,0.12)" stroke="rgba(60,110,113,0.30)" stroke-width="1"/>
+            <text x="67" y="419" text-anchor="middle" fill="rgba(255,255,255,0.60)" font-size="9" font-family="Sora,sans-serif" font-weight="500">Process Design</text>
+            <rect x="120" y="404" width="84" height="22" rx="11" fill="rgba(60,110,113,0.12)" stroke="rgba(60,110,113,0.30)" stroke-width="1"/>
+            <text x="162" y="419" text-anchor="middle" fill="rgba(255,255,255,0.60)" font-size="9" font-family="Sora,sans-serif" font-weight="500">Agentic AI</text>
+            <rect x="212" y="404" width="86" height="22" rx="11" fill="rgba(60,110,113,0.12)" stroke="rgba(60,110,113,0.30)" stroke-width="1"/>
+            <text x="255" y="419" text-anchor="middle" fill="rgba(255,255,255,0.60)" font-size="9" font-family="Sora,sans-serif" font-weight="500">Salesforce</text>
+            <!-- Bottom bar -->
+            <rect x="0" y="441" width="320" height="3" fill="rgba(60,110,113,0.35)"/>
           </svg>
         </div>
       </div>
@@ -439,7 +428,7 @@
   <style>
     #featured {
       background: var(--lilac-deep);
-      padding: 80px 0 72px;
+      padding: 56px 0 48px;
       border-top: none !important;
     }
     #featured + #projects { border-top: none; }
@@ -846,19 +835,19 @@
         <div class="project-card">
           <span class="case-tab">2026</span>
           <h3>Applause Award for Outstanding Leadership</h3>
-          <span class="card-sub">Deloitte Business Operations Services LLP</span>
+          <span class="card-sub">Deloitte Business Operations Services LLP (Deloitte Digital)</span>
           <p class="card-hook">Recognised for coaching and directing a cross-functional team of analysts and project coordinators to consistently high delivery standards.</p>
         </div>
         <div class="project-card">
           <span class="case-tab">2024</span>
           <h3>Spot Award for Best Project Lead</h3>
-          <span class="card-sub">Deloitte Business Operations Services LLP</span>
+          <span class="card-sub">Deloitte Business Operations Services LLP (Deloitte Digital)</span>
           <p class="card-hook">Awarded for outstanding program leadership across concurrent Fortune 500 and global enterprise engagements.</p>
         </div>
         <div class="project-card">
           <span class="case-tab">2023</span>
           <h3>Spot Award for Best Project Performance</h3>
-          <span class="card-sub">Deloitte Business Operations Services LLP</span>
+          <span class="card-sub">Deloitte Business Operations Services LLP (Deloitte Digital)</span>
           <p class="card-hook">A second Spot Award recognising consistent excellence in project leadership and delivery.</p>
         </div>
       </div>

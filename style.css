@@ -87,7 +87,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible{
 
 /* ---------- Hero ---------- */
 header.hero{
-  padding:72px 0 0;
+  padding:0 0 0;
   border-bottom:1px solid var(--line);
   background:
     radial-gradient(circle at 80% 50%, rgba(40,75,99,0.06), transparent 55%),
@@ -95,11 +95,11 @@ header.hero{
     var(--paper);
 }
 header.hero .wrap{
+  padding-top:52px;
   padding-bottom:52px;
 }
 .hero-banner{
   width:100%;
-  margin-top:40px;
   overflow:hidden;
   line-height:0;
 }

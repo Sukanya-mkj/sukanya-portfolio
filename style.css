@@ -214,12 +214,25 @@ h1.name{
   display:inline-flex;
   align-items:center;
   gap:6px;
-  padding-right:16px;
-  margin-right:16px;
+  padding: 6px 16px 6px 10px;
+  margin-right:6px;
   border-right:1px solid var(--line);
+  border-radius:8px;
+  transition: background 0.18s ease, color 0.18s ease, transform 0.18s ease;
+  cursor:default;
+}
+.meta-row span:hover{
+  background: rgba(60,110,113,0.12);
+  color: rgba(255,255,255,0.90);
+  transform: translateY(-2px);
 }
 .meta-row span:last-child{border-right:none;}
-.meta-row a{color:var(--ink); text-decoration-color:var(--lilac);}
+.meta-row a{
+  color:rgba(255,255,255,0.70);
+  text-decoration:none;
+  transition: color 0.18s ease;
+}
+.meta-row span:hover a{ color:#FFFFFF; }
 
 .cv-button{
   display:inline-flex;

@@ -123,16 +123,6 @@ header.hero .tagline{ color:rgba(255,255,255,0.62); }
 header.hero .meta-row{ font-size:13px; color:rgba(255,255,255,0.48); }
 header.hero .meta-row a{ color:rgba(255,255,255,0.70); text-decoration-color:#3C6E71; }
 header.hero .meta-row span{ border-right-color:rgba(255,255,255,0.12); }
-header.hero .cv-button{
-  background:rgba(60,110,113,0.25);
-  border:1px solid rgba(60,110,113,0.55);
-  box-shadow:none;
-  color:#FFFFFF;
-}
-header.hero .cv-button:hover{
-  background:rgba(60,110,113,0.40);
-  box-shadow:none;
-}
 /* Right column — brand statement */
 .hero-right-label{
   font-family:var(--sans);
@@ -238,23 +228,27 @@ h1.name{
 .cv-button{
   display:inline-flex;
   align-items:center;
-  gap:8px;
+  gap:9px;
   font-family:var(--sans);
-  font-size:13.5px;
-  color:var(--paper);
+  font-size:14px;
+  font-weight:600;
+  color:#FFFFFF;
   text-decoration:none;
-  background:linear-gradient(120deg, var(--lilac-deep), var(--lilac));
-  border:1px solid var(--lilac-deep);
-  border-radius:6px;
-  padding:11px 20px;
+  background:#3C6E71;
+  border:none;
+  border-radius:8px;
+  padding:12px 22px;
   margin-top:26px;
-  box-shadow:0 4px 14px rgba(40,75,99,0.25);
-  transition:transform 0.15s ease, box-shadow 0.15s ease;
+  cursor:pointer;
+  box-shadow:0 4px 14px rgba(60,110,113,0.35);
+  transition:background 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
 }
 .cv-button:hover{
+  background:#2F5A5D;
   transform:translateY(-2px);
-  box-shadow:0 8px 20px rgba(40,75,99,0.35);
+  box-shadow:0 6px 18px rgba(60,110,113,0.45);
 }
+.cv-button:active{ transform:translateY(0); }
 
 /* ---------- Section shell ---------- */
 section{padding:44px 0;}

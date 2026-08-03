@@ -797,3 +797,29 @@ footer p.lead{
   color:var(--ink-soft);
   opacity:0.7;
 }
+
+/* ---------- About two-column layout ---------- */
+.about-layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 400px;
+  gap:64px;
+  align-items:center;
+}
+.about-layout .about-text{ min-width:0; }
+.about-layout .about-text p{
+  color:var(--ink-soft);
+  margin:0 0 18px;
+  font-size:1.02rem;
+  max-width:none;
+}
+.about-layout .about-text p:last-child{ margin-bottom:0; }
+.about-card{
+  border-radius:20px;
+  border:1px solid var(--line);
+  background:var(--paper);
+  box-shadow:0 8px 32px rgba(40,75,99,0.08);
+  overflow:hidden;
+}
+@media(max-width:700px){
+  .about-layout{ grid-template-columns:1fr; gap:40px; }
+}

@@ -806,7 +806,7 @@ footer p.lead{
   display:grid;
   grid-template-columns:minmax(0,1fr) 400px;
   gap:64px;
-  align-items:center;
+  align-items:start;
 }
 .about-layout .about-text{ min-width:0; }
 .about-layout .about-text p{

@@ -25,28 +25,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-  .about-layout {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 64px;
-    align-items: center;
-  }
-  .about-layout .about-text p {
-    color: var(--ink-soft);
-    margin: 0 0 18px;
-    font-size: 1.02rem;
-  }
-  .about-layout .about-text p:last-child { margin-bottom: 0; }
-  .about-card {
-    border-radius: 20px;
-    border: 1px solid var(--line);
-    background: var(--paper);
-    box-shadow: 0 8px 32px rgba(40,75,99,0.08);
-    overflow: hidden;
-  }
-  @media (max-width: 860px) {
-    .about-layout { grid-template-columns: 1fr; gap: 40px; }
-  }
   .site-topnav {
     position: sticky;
     top: 0;
@@ -435,13 +413,14 @@
     <div class="wrap">
       <div class="section-head">
         <span class="section-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></span>
-        <h2>About me</h2>
+        <h2>About</h2>
       </div>
-      <div class="about-layout">
+      <div class="about-layout" style="display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:64px;align-items:center;">
         <div class="about-text">
           <p>I run marketing operations and strategy programmes for Fortune 500 and global enterprise clients, across industries as different as healthcare, retail, and education. A background in content and copywriting gave me an instinct for clarity that I now bring to every programme I run.</p>
-<p>Over the last six years, the programmes I have stepped into are rarely clean. Ambiguous mandates, teams unsure of what leadership actually wanted, deadlines that assumed clarity nobody had yet. My role has consistently been the same one: find the midpoint between what is being asked for and what is actually possible, and lead the team there with empathy rather than pressure.</p>
-<p>The projects below are less about the tools I used and more about the moments where structure had to be built from scratch, often under pressure, and always with people on the other end of the outcome.
+          <p>Over the last six years, the programmes I have stepped into are rarely clean. Ambiguous mandates, teams unsure of what leadership actually wanted, deadlines that assumed clarity nobody had yet. My role has consistently been the same one: find the midpoint between what is being asked for and what is actually possible, and lead the team there with empathy rather than pressure.</p>
+          <p>The projects below are less about the tools I used and more about the moments where structure had to be built from scratch, often under pressure, and always with people on the other end of the outcome.</p>
+        </div>
         <div class="about-card">
           <svg viewBox="0 0 320 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="width:100%;height:auto;display:block;">
             <!-- Background -->

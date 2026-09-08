@@ -911,3 +911,95 @@ footer p.lead{
   text-align:center;
 }
 .testimonial-source a{ color:var(--lilac-deep); }
+
+/* Featured recommendation */
+.testimonial-featured{
+  position:relative;
+  background:var(--paper);
+  border:1px solid var(--lilac);
+  border-radius:18px;
+  padding:38px 40px 30px;
+  box-shadow:0 10px 30px rgba(40,75,99,0.1);
+  margin-bottom:28px;
+}
+.testimonial-featured .testimonial-quote-mark{ font-size:4rem; }
+.testimonial-featured .testimonial-quote{
+  font-size:1.08rem;
+  margin-bottom:24px;
+}
+.testimonial-featured .testimonial-footer{ padding-top:18px; }
+@media(max-width:700px){
+  .testimonial-featured{ padding:28px 24px 22px; }
+}
+
+/* Carousel */
+.testimonial-carousel{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.testimonial-carousel-window{
+  overflow:hidden;
+  flex:1;
+}
+.testimonial-carousel-track{
+  display:flex;
+  transition:transform 0.35s ease;
+}
+.testimonial-carousel-track .testimonial-card{
+  flex:0 0 100%;
+  min-width:100%;
+  box-sizing:border-box;
+}
+.carousel-arrow{
+  flex-shrink:0;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:1px solid var(--line);
+  background:var(--paper);
+  color:var(--lilac-deep);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  box-shadow:0 2px 8px rgba(40,75,99,0.06);
+  transition:background 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+.carousel-arrow:hover{
+  background:var(--lilac-pale);
+  box-shadow:0 6px 18px rgba(40,75,99,0.14);
+  transform:translateY(-1px);
+}
+.carousel-arrow .icon{
+  width:18px;
+  height:18px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.carousel-dots{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:18px;
+}
+.carousel-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  border:none;
+  padding:0;
+  background:var(--line);
+  cursor:pointer;
+  transition:background 0.18s ease, transform 0.18s ease;
+}
+.carousel-dot.active{
+  background:var(--lilac);
+  transform:scale(1.25);
+}
+@media(max-width:700px){
+  .carousel-arrow{ width:34px; height:34px; }
+}

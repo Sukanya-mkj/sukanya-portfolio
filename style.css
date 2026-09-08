@@ -912,26 +912,6 @@ footer p.lead{
 }
 .testimonial-source a{ color:var(--lilac-deep); }
 
-/* Featured recommendation */
-.testimonial-featured{
-  position:relative;
-  background:var(--paper);
-  border:1px solid var(--lilac);
-  border-radius:18px;
-  padding:38px 40px 30px;
-  box-shadow:0 10px 30px rgba(40,75,99,0.1);
-  margin-bottom:28px;
-}
-.testimonial-featured .testimonial-quote-mark{ font-size:4rem; }
-.testimonial-featured .testimonial-quote{
-  font-size:1.08rem;
-  margin-bottom:24px;
-}
-.testimonial-featured .testimonial-footer{ padding-top:18px; }
-@media(max-width:700px){
-  .testimonial-featured{ padding:28px 24px 22px; }
-}
-
 /* Carousel */
 .testimonial-carousel{
   display:flex;
